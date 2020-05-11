@@ -9,22 +9,25 @@ composer require "sylius/plus:0.22.*"
 ## Update templates
 
 * To fix the templates overwriting problem and to be more consistent with Symfony Framework, all templates from other localization than `src/Resources/views/*` were moved there.
- For example, if one overridden `SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/` templates then files from `templates/bundles/SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/` should be moved to `templates/bundles/SyliusPlusPlugin/Resources/Inventory/`, 
- you can use commands to make it easier:
- 
- `mv templates/bundles/SyliusPlusPlugin/BusinessUnits/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/BusinessUnits/`
- `mv templates/bundles/SyliusPlusPlugin/CustomerPools/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/CustomerPools/`
- `mv templates/bundles/SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/Inventory/`
- `mv templates/bundles/SyliusPlusPlugin/Rbac/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/Rbac/`
- `mv templates/bundles/SyliusPlusPlugin/Returns/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/Returns/`
 
- If you've imported or extended any of these templates you must change paths as below:
+  For example, if one overridden `SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/` templates then files from `templates/bundles/SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/` should be moved to `templates/bundles/SyliusPlusPlugin/Resources/Inventory/`, 
+  you can use commands to make it easier:
  
- `@SyliusPlusPlugin/BusinessUnits/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/BusinessUnits/*`
- `@SyliusPlusPlugin/CustomerPools/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/CustomerPools/*`
- `@SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Inventory/*`
- `@SyliusPlusPlugin/Rbac/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Rbac/*`
- `@SyliusPlusPlugin/Returns/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Returns/*`
+  ```bash
+  mv templates/bundles/SyliusPlusPlugin/BusinessUnits/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/BusinessUnits/
+  mv templates/bundles/SyliusPlusPlugin/CustomerPools/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/CustomerPools/
+  mv templates/bundles/SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/Inventory/
+  mv templates/bundles/SyliusPlusPlugin/Rbac/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/Rbac/
+  mv templates/bundles/SyliusPlusPlugin/Returns/Infrastructure/Resources/views/ templates/bundles/SyliusPlusPlugin/Resources/Returns/
+  ```
+ 
+  If you've imported or extended any of these templates you must change paths as below:
+ 
+    * `@SyliusPlusPlugin/BusinessUnits/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/BusinessUnits/*`
+    * `@SyliusPlusPlugin/CustomerPools/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/CustomerPools/*`
+    * `@SyliusPlusPlugin/Inventory/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Inventory/*`
+    * `@SyliusPlusPlugin/Rbac/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Rbac/*`
+    * `@SyliusPlusPlugin/Returns/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Returns/*`
 
 # UPGRADE FROM 0.20.0 to 0.21.0
 
