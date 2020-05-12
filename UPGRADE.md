@@ -29,6 +29,18 @@ composer require "sylius/plus:0.22.*"
     * `@SyliusPlusPlugin/Rbac/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Rbac/*`
     * `@SyliusPlusPlugin/Returns/Infrastructure/Resources/views/*` to `@SyliusPlusPlugin/Returns/*`
 
+* Update file `templates/bundles/SyliusAdminBundle/Product/Show/_variantContent.html.twig` 
+ by removing duplicated shipping section:
+
+    ```diff
+        ...
+        <div class="doubling two column row">
+            <div class="column">
+                {% include '@SyliusPlusPlugin/Admin/Product/Show/_inventory.html.twig' %}
+    -           {% include '@SyliusAdmin/Product/Show/_variantContentShipping.html.twig' %}
+            </div>
+    ```
+
 # UPGRADE FROM 0.20.0 to 0.21.0
 
 ## General update
