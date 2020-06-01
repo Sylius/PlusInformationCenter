@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## v0.22.0 (2020-06-01)
+
+- [#579](https://github.com/Sylius/Plus/issues/579) Move all twig templates to 'src/Resources/views/*' ([@Tomanhez](https://github.com/Tomanhez))
+- [#580](https://github.com/Sylius/Plus/issues/580) Add missing commands in upgrade file  ([@Tomanhez](https://github.com/Tomanhez))
+- [#581](https://github.com/Sylius/Plus/issues/581) Fix duplicated shipping content ([@arti0090](https://github.com/arti0090))
+- [#583](https://github.com/Sylius/Plus/issues/583) Beautify UPGRADE.md instructions ([@pamil](https://github.com/pamil))
+- [#584](https://github.com/Sylius/Plus/issues/584) [Composer] Add conflict to doctrine/inflector ^1.4 to fix taxons ([@GSadee](https://github.com/GSadee))
+- [#585](https://github.com/Sylius/Plus/issues/585) update upgrade file with changes in product variant page ([@arti0090](https://github.com/arti0090))
+- [#586](https://github.com/Sylius/Plus/issues/586) [Maintenance] Fix unit test fixtures after nelmio/alice update ([@GSadee](https://github.com/GSadee), [@lchrusciel](https://github.com/lchrusciel))
+- [#590](https://github.com/Sylius/Plus/issues/590) [Maintenance] Temporarily add conflict to the 4.4.9 version of symfony/form ([@GSadee](https://github.com/GSadee))
+
 ## v0.21.0 (2020-05-04)
 
 - [#559](https://github.com/Sylius/Plus/issues/559) [GMV] Report without taxes ([@Tomanhez](https://github.com/Tomanhez), [@lchrusciel](https://github.com/lchrusciel), [@GSadee](https://github.com/GSadee))
