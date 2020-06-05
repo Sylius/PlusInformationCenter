@@ -1,3 +1,21 @@
+# UPGRADE FROM 0.22.0 to 0.23.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.23.*"
+```
+
+* `BusinessUnitFixture` service has been moved and changed id from `sylius.fixture.business_unit` to `Sylius\Plus\BusinessUnits\Infrastructure\Fixture\BusinessUnitFixture`
+
+* Some fixtures services have been moved to proper namespaces and changed their ids:
+    * `Sylius\Plus\Fixture\Factory\BusinessUnitExampleFactory` to `Sylius\Plus\BusinessUnits\Infrastructure\Fixture\Factory\BusinessUnitExampleFactory`
+    * `Sylius\Plus\Fixture\Factory\BusinessUnitAddressExampleFactory` to `Sylius\Plus\BusinessUnits\Infrastructure\Fixture\Factory\BusinessUnitAddressExampleFactory`
+    * `Sylius\Plus\Fixture\Factory\InventorySourceExampleFactory` to `Sylius\Plus\Inventory\Infrastructure\Fixture\Factory\InventorySourceExampleFactory`
+    * `Sylius\Plus\Fixture\InventorySourceFixture` to `Sylius\Plus\Inventory\Infrastructure\Fixture\InventorySourceFixture`
+    * `Sylius\Plus\Fixture\InventorySourceStockFixture` to `Sylius\Plus\Inventory\Infrastructure\Fixture\InventorySourceStockFixture`
+    * `Sylius\Plus\Fixture\ReturnRequestFixture` to `Sylius\Plus\Returns\Infrastructure\Fixture\ReturnRequestFixture`
+
 # UPGRADE FROM 0.21.0 to 0.22.0
 
 ## General update
