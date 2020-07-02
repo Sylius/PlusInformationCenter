@@ -16,6 +16,17 @@ composer require "sylius/plus:0.23.*"
     * `Sylius\Plus\Fixture\InventorySourceStockFixture` to `Sylius\Plus\Inventory\Infrastructure\Fixture\InventorySourceStockFixture`
     * `Sylius\Plus\Fixture\ReturnRequestFixture` to `Sylius\Plus\Returns\Infrastructure\Fixture\ReturnRequestFixture`
 
+## Migrations
+
+```bash
+cp vendor/sylius/plus/migrations/Version20200603132754.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200604060510.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200605081658.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200605143716.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200610131835.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200624071028.php src/Migrations/
+```
+
 # UPGRADE FROM 0.21.0 to 0.22.0
 
 ## General update
