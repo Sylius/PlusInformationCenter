@@ -1,3 +1,26 @@
+# UPGRADE FROM 0.23.0 to 0.24.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.24.*"
+```
+
+* `Sylius\Plus\Loyalty\Application\Processor\LoyaltyPointsProcessorInterface` interface has been removed.
+* Constant types of loyalty rule actions has been moved:
+    * from `Sylius\Plus\Loyalty\Domain\Rule\ItemsTotalToPointsRationRatio` to `Sylius\Plus\Loyalty\Application\Calculator\ChannelsBasedItemsTotalToPointsRatioCalculator`
+    * from `Sylius\Plus\Loyalty\Domain\Rule\PointsPerProductRatio` to `Sylius\Plus\Loyalty\Application\Calculator\PointsPerProductRatioCalculator`
+* `increaseBalance` and `decreaseBalance` methods in `Sylius\Plus\Loyalty\Domain\Model\LoyaltyPointsAccountInterface` have been removed in favour of `addTransaction` method.
+* `value` field in `Sylius\Plus\Loyalty\Domain\Model\LoyaltyPurchase` has been changed to `loyaltyPoints`.
+
+## Migrations
+
+```bash
+cp vendor/sylius/plus/migrations/Version20200702111344.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200706081938.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200709113414.php src/Migrations/
+```
+
 # UPGRADE FROM 0.22.0 to 0.23.0
 
 ## General update
