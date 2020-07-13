@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## v0.24.0 (2020-07-13)
+
+- [#651](https://github.com/Sylius/Plus/issues/651) refactor customer transform context ([@AdamKasp](https://github.com/AdamKasp))
+- [#634](https://github.com/Sylius/Plus/issues/634) [Loyalty] Create loyalty rule with points based on product ratio configuration ([@arti0090](https://github.com/arti0090), [@lchrusciel](https://github.com/lchrusciel))
+- [#654](https://github.com/Sylius/Plus/issues/654) [Maintenance] Conflict failed spec version ([@lchrusciel](https://github.com/lchrusciel))
+- [#653](https://github.com/Sylius/Plus/issues/653) [Behat][Loyalty] Describe points per product loyalty rule edition ([@lchrusciel](https://github.com/lchrusciel))
+- [#649](https://github.com/Sylius/Plus/issues/649) [Loyalty] Loyalty points amount on the order summary ([@Tomanhez](https://github.com/Tomanhez))
+- [#646](https://github.com/Sylius/Plus/issues/646) Change labels from "value" to "loyalty points" on loyalty purchase pages ([@arti0090](https://github.com/arti0090))
+- [#650](https://github.com/Sylius/Plus/issues/650) [Loyalty] Implement points per product loyalty rule edition ([@lchrusciel](https://github.com/lchrusciel), [@GSadee](https://github.com/GSadee))
+- [#648](https://github.com/Sylius/Plus/issues/648) Add description field and fix styling of loyalty purchase cards ([@arti0090](https://github.com/arti0090))
+- [#655](https://github.com/Sylius/Plus/issues/655) [LoyaltyRule] Add validation for loyalty rule that is based on selected product ([@Tomanhez](https://github.com/Tomanhez))
+- [#656](https://github.com/Sylius/Plus/issues/656) [Inventory][Bug] Paid items are released instead of given back ([@lchrusciel](https://github.com/lchrusciel))
+- [#652](https://github.com/Sylius/Plus/issues/652) [Loyalty] Points transactions log on admin panel. ([@AdamKasp](https://github.com/AdamKasp))
+- [#659](https://github.com/Sylius/Plus/issues/659) [LoyaltyRule] Ability to create loyalty rule with ratio 0 points   ([@Tomanhez](https://github.com/Tomanhez))
+- [#658](https://github.com/Sylius/Plus/issues/658) [Loyalty] Dynamic form handling for different loyalty rule actions ([@GSadee](https://github.com/GSadee), [@lchrusciel](https://github.com/lchrusciel))
+- [#657](https://github.com/Sylius/Plus/issues/657) added promotions and loyalty purches into fixtures ([@arti0090](https://github.com/arti0090), [@GSadee](https://github.com/GSadee))
+- [#661](https://github.com/Sylius/Plus/issues/661) [Loyalty] Inline channel based points for total template ([@lchrusciel](https://github.com/lchrusciel), [@GSadee](https://github.com/GSadee))
+- [#663](https://github.com/Sylius/Plus/issues/663) [Loyalty] Fix loyalty point template ([@Tomanhez](https://github.com/Tomanhez))
+- [#665](https://github.com/Sylius/Plus/issues/665) [Loyalty] refactor balance operation ([@AdamKasp](https://github.com/AdamKasp))
+- [#666](https://github.com/Sylius/Plus/issues/666) Update UPGRADE file for v0.24.0 ([@GSadee](https://github.com/GSadee))
+- [#664](https://github.com/Sylius/Plus/issues/664) [Loyalty] Improve details on transaction history with fixes ([@AdamKasp](https://github.com/AdamKasp), [@GSadee](https://github.com/GSadee))
+- [#667](https://github.com/Sylius/Plus/issues/667) [Loyalty] Minor fixes ([@Tomanhez](https://github.com/Tomanhez))
+- [#668](https://github.com/Sylius/Plus/issues/668) [Loyalty] Remove clearing LoyaltyPoints adjustment form LoyaltyPointsProcessor and move it to AdjustmentClearer ([@Tomanhez](https://github.com/Tomanhez))
+
 ## v0.23.0 (2020-07-02)
 
 - [#592](https://github.com/Sylius/Plus/issues/592) [Behat][Loyalty] Add scenarios for adding and editing a loyalty purchase ([@GSadee](https://github.com/GSadee))
