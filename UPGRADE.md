@@ -9,6 +9,12 @@ composer require "sylius/plus:0.25.*"
 * `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\EnabledLoyaltyPurchaseListQueryBuilder` class has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\ChannelRestrictingEnabledLoyaltyPurchaseListQueryBuilder` class.
 * `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\EnabledLoyaltyPurchaseListQueryBuilderInterface` interface has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\ChannelRestrictingEnabledLoyaltyPurchaseListQueryBuilderInterface` interface.
 
+## Migrations
+
+```bash
+cp vendor/sylius/plus/migrations/Version20200717100403.php src/Migrations/
+```
+
 # UPGRADE FROM 0.23.0 to 0.24.0
 
 ## General update
