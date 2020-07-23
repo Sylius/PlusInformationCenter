@@ -6,6 +6,7 @@
 composer require "sylius/plus:0.25.*"
 ```
 
+* `Sylius\Plus\Loyalty\Application\Calculator\PointsPerProductRatioCalculator` class has been replaced with `Sylius\Plus\Loyalty\Application\Calculator\ChannelsBasedPointsPerProductRatioCalculator` class.
 * `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\EnabledLoyaltyPurchaseListQueryBuilder` class has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\ChannelRestrictingEnabledLoyaltyPurchaseListQueryBuilder` class.
 * `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\EnabledLoyaltyPurchaseListQueryBuilderInterface` interface has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\ChannelRestrictingEnabledLoyaltyPurchaseListQueryBuilderInterface` interface.
 
