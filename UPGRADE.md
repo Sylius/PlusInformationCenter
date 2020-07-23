@@ -2,6 +2,12 @@
 
 ## General update
 
+* Copy new templates that are overriden by Sylius Plus into `templates/bundles`:
+    ```
+    vendor/sylius/plus/src/Resources/templates/bundles/SyliusUiBundle/Security/_login.html.twig
+    vendor/sylius/plus/src/Resources/templates/bundles/SyliusAdminBundle/Security/_content.html.twig
+    ```
+
 ```bash
 composer require "sylius/plus:0.25.*"
 ```
