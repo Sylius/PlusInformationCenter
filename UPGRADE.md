@@ -2,15 +2,15 @@
 
 ## General update
 
+```bash
+composer require "sylius/plus:0.25.*"
+```
+
 * Copy new templates that are overriden by Sylius Plus into `templates/bundles`:
     ```
     vendor/sylius/plus/src/Resources/templates/bundles/SyliusUiBundle/Security/_login.html.twig
     vendor/sylius/plus/src/Resources/templates/bundles/SyliusAdminBundle/Security/_content.html.twig
     ```
-
-```bash
-composer require "sylius/plus:0.25.*"
-```
 
 * `Sylius\Plus\Loyalty\Application\Calculator\PointsPerProductRatioCalculator` class has been replaced with `Sylius\Plus\Loyalty\Application\Calculator\ChannelsBasedPointsPerProductRatioCalculator` class.
 * `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\EnabledLoyaltyPurchaseListQueryBuilder` class has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Doctrine\ORM\ChannelRestrictingEnabledLoyaltyPurchaseListQueryBuilder` class.
@@ -20,6 +20,7 @@ composer require "sylius/plus:0.25.*"
 
 ```bash
 cp vendor/sylius/plus/migrations/Version20200717100403.php src/Migrations/
+cp vendor/sylius/plus/migrations/Version20200721091904.php src/Migrations/
 ```
 
 # UPGRADE FROM 0.23.0 to 0.24.0
@@ -29,6 +30,8 @@ cp vendor/sylius/plus/migrations/Version20200717100403.php src/Migrations/
 ```bash
 composer require "sylius/plus:0.24.*"
 ```
+
+## Update templates
 
 * `Sylius\Plus\Loyalty\Application\Processor\LoyaltyPointsProcessorInterface` interface has been removed.
 * Constant types of loyalty rule actions has been moved:

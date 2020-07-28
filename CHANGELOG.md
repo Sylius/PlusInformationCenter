@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## v0.25.0 (2020-07-28)
+
+- [#669](https://github.com/Sylius/Plus/issues/669) improve UI of loyalty purchase cards ([@arti0090](https://github.com/arti0090))
+- [#671](https://github.com/Sylius/Plus/issues/671) [Loyalty Purchase] show only available LP in channel ([@AdamKasp](https://github.com/AdamKasp))
+- [#672](https://github.com/Sylius/Plus/issues/672) [Loyalty Purchase] behats refactor + fixes ([@AdamKasp](https://github.com/AdamKasp))
+- [#675](https://github.com/Sylius/Plus/issues/675) [Loyalty Purchase] add link to order on purchase history details ([@AdamKasp](https://github.com/AdamKasp))
+- [#673](https://github.com/Sylius/Plus/issues/673) [Loyalty] Properly earning Loyalty Points with taxes and promotions ([@Tomanhez](https://github.com/Tomanhez))
+- [#674](https://github.com/Sylius/Plus/issues/674) Seeing loyalty points total in customer info for admin ([@arti0090](https://github.com/arti0090))
+- [#676](https://github.com/Sylius/Plus/issues/676) [Loyalty Purchase] history - name in details ([@AdamKasp](https://github.com/AdamKasp))
+- [#679](https://github.com/Sylius/Plus/issues/679) [Loyalty Purchase] add migration to upgrade file ([@AdamKasp](https://github.com/AdamKasp))
+- [#678](https://github.com/Sylius/Plus/issues/678) added view for loyalty points transaction on customer page ([@arti0090](https://github.com/arti0090))
+- [#681](https://github.com/Sylius/Plus/issues/681) [Loyalty] Make points per product rule configurable per channel ([@GSadee](https://github.com/GSadee))
+- [#680](https://github.com/Sylius/Plus/issues/680) [Inventory] Being unable to place an order with product if stock does not exist ([@Tomanhez](https://github.com/Tomanhez))
+- [#682](https://github.com/Sylius/Plus/issues/682) Add sylius plus logo to admin login page ([@AdamKasp](https://github.com/AdamKasp))
+
 ## v0.24.0 (2020-07-13)
 
 - [#651](https://github.com/Sylius/Plus/issues/651) refactor customer transform context ([@AdamKasp](https://github.com/AdamKasp))
