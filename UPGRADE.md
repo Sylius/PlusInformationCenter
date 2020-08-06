@@ -1,3 +1,14 @@
+# UPGRADE FROM 0.25.0 to 0.26.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.26.*"
+```
+
+* `Sylius\Plus\Loyalty\Infrastructure\Form\DataTransformer\ChangeActionToChannelsBasedItemsTotalToPointsRatioConfigurationTransformer` class has been renamed to `Sylius\Plus\Loyalty\Infrastructure\Form\DataTransformer\ChangeActionToChannelsBasedItemsTotalToPointsRatioConfigurationTransformer` class.
+* `Sylius\Plus\Loyalty\Infrastructure\Form\Type\Action\ChannelBasedItemsTotalToPointsRatioConfigurationType` class has been renamed to `Sylius\Plus\Loyalty\Infrastructure\Form\Type\Action\ChannelsBasedItemsTotalToPointsRatioConfigurationType` class.
+
 # UPGRADE FROM 0.24.0 to 0.25.0
 
 ## General update
