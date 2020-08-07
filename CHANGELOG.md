@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.25.1 (2020-08-07)
+
+- [#683](https://github.com/Sylius/Plus/issues/683) [Loyalty] Product per channel choice type ([@Tomanhez](https://github.com/Tomanhez))
+- [#684](https://github.com/Sylius/Plus/issues/684) Remove unnecessary translations after upgrading sylius/sylius to 1.7 ([@GSadee](https://github.com/GSadee))
+- [#685](https://github.com/Sylius/Plus/issues/685) [Loyalty] Unify names of channels based services ([@GSadee](https://github.com/GSadee))
+
 ## v0.25.0 (2020-07-28)
 
 - [#669](https://github.com/Sylius/Plus/issues/669) improve UI of loyalty purchase cards ([@arti0090](https://github.com/arti0090))
