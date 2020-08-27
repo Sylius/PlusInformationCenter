@@ -1,3 +1,12 @@
+# UPGRADE FROM 0.25.2 to 0.25.3
+
+## General update
+
+* Copy new templates that are overriden by Sylius Plus into `templates/bundles`:
+    ```
+    vendor/sylius/plus/src/Resources/templates/bundles/SyliusAdminBundle/Customer/_form.html.twig
+    ```
+
 # UPGRADE FROM 0.25.0 to 0.25.1
 
 ## General update
