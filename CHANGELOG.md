@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.25.2 (2020-08-27)
+
+- [#688](https://github.com/Sylius/Plus/issues/688) Unfinalize fixture and example factory classes ([@pamil](https://github.com/pamil))
+
 ## v0.25.1 (2020-08-07)
 
 - [#683](https://github.com/Sylius/Plus/issues/683) [Loyalty] Product per channel choice type ([@Tomanhez](https://github.com/Tomanhez))
