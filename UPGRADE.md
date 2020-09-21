@@ -1,3 +1,68 @@
+# UPGRADE FROM 0.25.3 to 0.26.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.26.*"
+```
+
+* You need to upgrade Sylius to version 1.8 and add necessary migrations: https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.8.md
+
+* Update security provider for `sylius_api_shop_user_provider` in your `config/packages/security.yaml` file: 
+    ```diff
+            security:
+                providers:
+                    ...
+        -           sylius_api_shop_user_provider:
+        -               id: sylius.shop_user_provider.email_or_name_based
+        +           sylius_api_shop_user_provider:
+        +               id: Sylius\Plus\CustomerPools\Infrastructure\Provider\UsernameAndCustomerPoolProvider
+    ```
+
+## Update templates
+
+* Update file `templates/bundles/SyliusAdminBundle/Channel/_form.html.twig` by adding:
+
+    ```diff
+        ...
+        <div class="ui labeled input">
+    -       <div class="ui label">http://</div>
+    +       <div class="ui label">https://</div>
+        ...
+    ```
+
+* Update file `templates/bundles/SyliusAdminBundle/Order/Show/_header.html.twig` by adding:
+
+    ```diff
+        ...
+        <div class="item">
+    -       {{ flags.fromLocaleCode(order.localeCode) }}{{ order.localeCode|locale_name }}
+    +       {{ flags.fromLocaleCode(order.localeCode) }}{{ order.localeCode|sylius_locale_name }}
+        </div>
+        ...
+    ```
+
+* Update file `templates/bundles/SyliusShopBundle/Account/Order/Show/_header.html.twig` by adding:
+
+    ```diff
+        ...
+        <div class="item">
+    -       {{ flags.fromLocaleCode(order.localeCode) }}{{ order.localeCode|locale_name }}
+    +       {{ flags.fromLocaleCode(order.localeCode) }}{{ order.localeCode|sylius_locale_name }}
+        </div>
+        ...
+    ```
+
+* Update file `templates/bundles/SyliusUiBundle/Grid/_default.html.twig` by adding:
+
+    ```diff
+        ...
+        <div class="title {% if criteria is not null %}active{% endif %}">
+            <i class="dropdown icon"></i>
+    +       <i class="filter icon"></i>
+        ...
+    ```
+
 # UPGRADE FROM 0.25.2 to 0.25.3
 
 ## General update
