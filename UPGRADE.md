@@ -7,6 +7,7 @@ composer require "sylius/plus:0.26.*"
 ```
 
 * You need to upgrade Sylius to version 1.8 and add necessary migrations: https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.8.md
+Remember to place `Sylius\Plus\SyliusPlusPlugin` after `Sylius\Bundle\ApiBundle\SyliusApiBundle` in your `config/bundles.php`.
 
 * Update security provider for `sylius_api_shop_user_provider` in your `config/packages/security.yaml` file: 
     ```diff
