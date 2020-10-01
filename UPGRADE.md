@@ -63,6 +63,15 @@ Remember to place `Sylius\Plus\SyliusPlusPlugin` after `Sylius\Bundle\ApiBundle\
     +       <i class="filter icon"></i>
         ...
     ```
+  
+* The `Sylius\Plus\Inventory\Application\Checker\AvailabilityCheckerInterface` interface have brought back compatibility 
+with `Sylius\Component\Inventory\Checker\AvailabilityCheckerInterface`. As a result, service definition of 
+`Sylius\Plus\Inventory\Application\Checker\AvailabilityChecker` has been changed. The method 
+`public function isStockSufficient(VariantsQuantityMapInterface $variantsQuantityMap): bool` has been moved to 
+`Sylius\Plus\Inventory\Application\Checker\VariantQuantityMapAvailabilityChecker`, so service definition needs to be 
+adjusted accordingly. What is more, the constructor of `AvailabilityChecker` has been adjusted as well. Services expected 
+now are `Sylius\Component\Inventory\Checker\AvailabilityCheckerInterface` (for decoration purposes) and 
+`Sylius\Plus\Inventory\Application\Checker\IsStockSufficientCheckerInterface`. 
 
 # UPGRADE FROM 0.25.2 to 0.25.3
 
