@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v0.26.0 (2020-10-02)
+
+- [#687](https://github.com/Sylius/Plus/issues/687) Fix psalm errors after upgrading vimeo/psalm to 3.14.2 ([@GSadee](https://github.com/GSadee))
+- [#686](https://github.com/Sylius/Plus/issues/686) Improve RBAC labels ([@pamil](https://github.com/pamil))
+- [#689](https://github.com/Sylius/Plus/issues/689) [Admin][Customer] Fix customer create form ([@Tomanhez](https://github.com/Tomanhez))
+- [#690](https://github.com/Sylius/Plus/issues/690) [Admin][Customer] Add fix for ResourceChannelChecker ([@Tomanhez](https://github.com/Tomanhez))
+- [#691](https://github.com/Sylius/Plus/issues/691) [Behats] Add fixes fo suites ([@Tomanhez](https://github.com/Tomanhez))
+- [#693](https://github.com/Sylius/Plus/issues/693) [Customer][CustomerPool] provide only available customer pool for admin while customer creation ([@AdamKasp](https://github.com/AdamKasp))
+- [#694](https://github.com/Sylius/Plus/issues/694) Upgrade to Sylius 1.8 ([@GSadee](https://github.com/GSadee))
+- [#695](https://github.com/Sylius/Plus/issues/695) Configure migrations to use migrations from InvoicingPlugin ([@GSadee](https://github.com/GSadee))
+- [#698](https://github.com/Sylius/Plus/issues/698) Fix Fixtures - replace UK to GB country shortcut ([@Tomanhez](https://github.com/Tomanhez))
+- [#697](https://github.com/Sylius/Plus/issues/697) [API] Implement checking inventory source on shipment after checkout ([@GSadee](https://github.com/GSadee))
+- [#699](https://github.com/Sylius/Plus/issues/699) [Addressing][Login] Fix Ajax controller for checks existence a customer in present customerPool ([@Tomanhez](https://github.com/Tomanhez))
+- [#702](https://github.com/Sylius/Plus/issues/702) [Inventory] Bring back BC in AvailabilityChecker ([@lchrusciel](https://github.com/lchrusciel))
+- [#703](https://github.com/Sylius/Plus/issues/703) Upgrade to Sylius v1.8.1 ([@GSadee](https://github.com/GSadee))
+
 ## v0.25.2 (2020-08-27)
 
 - [#688](https://github.com/Sylius/Plus/issues/688) Unfinalize fixture and example factory classes ([@pamil](https://github.com/pamil))
