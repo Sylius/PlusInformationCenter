@@ -1,4 +1,4 @@
-# UPGRADE FROM 0.25.3 to 0.26.0
+# UPGRADE FROM 0.25.2 to 0.26.0
 
 ## General update
 
@@ -6,8 +6,20 @@
 composer require "sylius/plus:0.26.*"
 ```
 
-* You need to upgrade Sylius to version 1.8 and add necessary migrations: https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.8.md
+* You need to upgrade Sylius to version 1.8.1: https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.8.md
 Remember to place `Sylius\Plus\SyliusPlusPlugin` after `Sylius\Bundle\ApiBundle\SyliusApiBundle` in your `config/bundles.php`.
+
+    > TIP
+
+    Take a look at `vendor/sylius/plus/etc/migrations-1.8-invoicing-plugin.sh` and `vendor/sylius/plus/etc/migrations-1.8-plus.sh` 
+    scripts - it would execute marking all migrations automatically by:
+    
+    ```bash
+    ./vendor/sylius/plus/etc/migrations-1.8-invoicing-plugin.sh
+    ./vendor/sylius/plus/etc/migrations-1.8-plus.sh
+    ```
+
+* In addition to the above UPGRADE file, mark all migrations from **@SyliusPlus** and **@SyliusInvoicingPlugin** as executed.
 
 * Update security provider for `sylius_api_shop_user_provider` in your `config/packages/security.yaml` file: 
     ```diff
@@ -21,6 +33,11 @@ Remember to place `Sylius\Plus\SyliusPlusPlugin` after `Sylius\Bundle\ApiBundle\
     ```
 
 ## Update templates
+
+* Copy new templates that are overriden by Sylius Plus into `templates/bundles`:
+    ```
+    vendor/sylius/plus/src/Resources/templates/bundles/SyliusAdminBundle/Customer/_form.html.twig
+    ```
 
 * Update file `templates/bundles/SyliusAdminBundle/Channel/_form.html.twig` by adding:
 
@@ -72,15 +89,6 @@ with `Sylius\Component\Inventory\Checker\AvailabilityCheckerInterface`. As a res
 adjusted accordingly. What is more, the constructor of `AvailabilityChecker` has been adjusted as well. Services expected 
 now are `Sylius\Component\Inventory\Checker\AvailabilityCheckerInterface` (for decoration purposes) and 
 `Sylius\Plus\Inventory\Application\Checker\IsStockSufficientCheckerInterface`. 
-
-# UPGRADE FROM 0.25.2 to 0.25.3
-
-## General update
-
-* Copy new templates that are overriden by Sylius Plus into `templates/bundles`:
-    ```
-    vendor/sylius/plus/src/Resources/templates/bundles/SyliusAdminBundle/Customer/_form.html.twig
-    ```
 
 # UPGRADE FROM 0.25.0 to 0.25.1
 
