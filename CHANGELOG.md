@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## v0.27.0 (2020-10-13)
+
+- [#701](https://github.com/Sylius/Plus/issues/701) [Refund] Validating refunding 0 items ([@GSadee](https://github.com/GSadee))
+- [#700](https://github.com/Sylius/Plus/issues/700) [API]added loyalty total and transactions endpoints ([@arti0090](https://github.com/arti0090))
+- [#704](https://github.com/Sylius/Plus/issues/704) Replacement order constraint fix ([@Tomanhez](https://github.com/Tomanhez))
+- [#708](https://github.com/Sylius/Plus/issues/708) Upgrade phpspec version ([@AdamKasp](https://github.com/AdamKasp))
+- [#705](https://github.com/Sylius/Plus/issues/705) [API][Loyalty]Api loyalty points endpoint security ([@arti0090](https://github.com/arti0090))
+- [#707](https://github.com/Sylius/Plus/issues/707) [Api] Create inventory source ([@SirDomin](https://github.com/SirDomin), [@AdamKasp](https://github.com/AdamKasp))
+- [#710](https://github.com/Sylius/Plus/issues/710) [API] Browsing and editing inventory sources ([@Tomanhez](https://github.com/Tomanhez))
+- [#706](https://github.com/Sylius/Plus/issues/706) [API] Register new user in a proper customer pool ([@AdamKasp](https://github.com/AdamKasp), [@GSadee](https://github.com/GSadee), [@lchrusciel](https://github.com/lchrusciel))
+- [#711](https://github.com/Sylius/Plus/issues/711) [API]fix loyalty purchase routes ([@arti0090](https://github.com/arti0090))
+- [#712](https://github.com/Sylius/Plus/issues/712) [API] Implement disabling inventory sources for channel ([@GSadee](https://github.com/GSadee))
+- [#713](https://github.com/Sylius/Plus/issues/713) [API] Delete inventory source ([@AdamKasp](https://github.com/AdamKasp))
+- [#714](https://github.com/Sylius/Plus/issues/714) [API] Add get for collection of inventory source addresses ([@GSadee](https://github.com/GSadee))
+- [#715](https://github.com/Sylius/Plus/issues/715) [Return Request] Customers should can create return request only for their own orders ([@AdamKasp](https://github.com/AdamKasp))
+- [#717](https://github.com/Sylius/Plus/issues/717) Remove unnecessary messenger configuration from test application ([@GSadee](https://github.com/GSadee))
+- [#718](https://github.com/Sylius/Plus/issues/718) [Loyalty] Move loyalty points account data provider to a proper directory ([@GSadee](https://github.com/GSadee))
+- [#719](https://github.com/Sylius/Plus/issues/719) [CustomerPool] Move unique shop user validator to a proper directory ([@GSadee](https://github.com/GSadee))
+
 ## v0.26.0 (2020-10-02)
 
 - [#687](https://github.com/Sylius/Plus/issues/687) Fix psalm errors after upgrading vimeo/psalm to 3.14.2 ([@GSadee](https://github.com/GSadee))

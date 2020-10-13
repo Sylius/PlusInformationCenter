@@ -1,3 +1,11 @@
+# UPGRADE FROM 0.26.0 to 0.27.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.27.*"
+```
+
 # UPGRADE FROM 0.25.2 to 0.26.0
 
 ## General update
