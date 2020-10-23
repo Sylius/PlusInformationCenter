@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.28.0 (2020-10-23)
+
+- [#716](https://github.com/Sylius/Plus/issues/716) [API]Add customer loyalty points account serialization and improve behat ([@arti0090](https://github.com/arti0090))
+- [#720](https://github.com/Sylius/Plus/issues/720) [Loyalty]Don't create Loyalty points transaction when Loyalty points earned in order is 0 ([@arti0090](https://github.com/arti0090))
+- [#722](https://github.com/Sylius/Plus/issues/722) [API] Empty loyalty transactions ([@arti0090](https://github.com/arti0090))
+- [#724](https://github.com/Sylius/Plus/issues/724) [Fixture] Add getOneBy method to LazyOption ([@lchrusciel](https://github.com/lchrusciel))
+- [#721](https://github.com/Sylius/Plus/issues/721) Refactor services and improve behat function ([@arti0090](https://github.com/arti0090))
+
 ## v0.27.0 (2020-10-13)
 
 - [#701](https://github.com/Sylius/Plus/issues/701) [Refund] Validating refunding 0 items ([@GSadee](https://github.com/GSadee))
