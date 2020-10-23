@@ -7,6 +7,7 @@
 - [#722](https://github.com/Sylius/Plus/issues/722) [API] Empty loyalty transactions ([@arti0090](https://github.com/arti0090))
 - [#724](https://github.com/Sylius/Plus/issues/724) [Fixture] Add getOneBy method to LazyOption ([@lchrusciel](https://github.com/lchrusciel))
 - [#721](https://github.com/Sylius/Plus/issues/721) Refactor services and improve behat function ([@arti0090](https://github.com/arti0090))
+- [#725](https://github.com/Sylius/Plus/issues/725) Upgrade RefundPlugin to RC.4 ([@GSadee](https://github.com/GSadee))
 
 ## v0.27.0 (2020-10-13)
 
