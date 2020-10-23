@@ -1,3 +1,22 @@
+# UPGRADE FROM 0.27.0 to 0.28.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.28.*"
+```
+
+* You need to handle **Refund Plugin** migrations in a similar way to **Invoicing Plugin**.
+
+    > TIP
+
+    Take a look at `vendor/sylius/plus/etc/migrations-1.8-refund-plugin.sh` script - it would execute 
+    marking all migrations automatically by:
+    
+    ```bash
+    ./vendor/sylius/plus/etc/migrations-1.8-refund-plugin.sh
+    ```
+
 # UPGRADE FROM 0.26.0 to 0.27.0
 
 ## General update
