@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.28.1 (2020-10-27)
+
+- Unfinalized Behat pages
+
 ## v0.28.0 (2020-10-23)
 
 - [#716](https://github.com/Sylius/Plus/issues/716) [API]Add customer loyalty points account serialization and improve behat ([@arti0090](https://github.com/arti0090))
@@ -8,6 +12,10 @@
 - [#724](https://github.com/Sylius/Plus/issues/724) [Fixture] Add getOneBy method to LazyOption ([@lchrusciel](https://github.com/lchrusciel))
 - [#721](https://github.com/Sylius/Plus/issues/721) Refactor services and improve behat function ([@arti0090](https://github.com/arti0090))
 - [#725](https://github.com/Sylius/Plus/issues/725) Upgrade RefundPlugin to RC.4 ([@GSadee](https://github.com/GSadee))
+
+## v0.27.1 (2020-10-27)
+
+- Unfinalized Behat pages
 
 ## v0.27.0 (2020-10-13)
 
@@ -27,6 +35,10 @@
 - [#717](https://github.com/Sylius/Plus/issues/717) Remove unnecessary messenger configuration from test application ([@GSadee](https://github.com/GSadee))
 - [#718](https://github.com/Sylius/Plus/issues/718) [Loyalty] Move loyalty points account data provider to a proper directory ([@GSadee](https://github.com/GSadee))
 - [#719](https://github.com/Sylius/Plus/issues/719) [CustomerPool] Move unique shop user validator to a proper directory ([@GSadee](https://github.com/GSadee))
+
+## v0.26.1 (2020-10-27)
+
+- Unfinalized Behat pages
 
 ## v0.26.0 (2020-10-02)
 
