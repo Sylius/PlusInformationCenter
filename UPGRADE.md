@@ -1,3 +1,27 @@
+# UPGRADE FROM 0.28.X to 0.29.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.29.*"
+```
+
+* Update parameters and access control in your `config/packages/security.yaml` file:
+
+    ```diff
+        parameters:
+            ...
+    +       sylius.security.new_api_user_account_route: "%sylius.security.new_api_shop_route%/account"
+    +       sylius.security.new_api_user_account_regex: "^%sylius.security.new_api_user_account_route%"
+
+        security:
+            access_control:
+                ...
+    +           - { path: "%sylius.security.new_api_user_account_regex%/.*", role: ROLE_USER }
+    -           - { path: "%sylius.security.new_api_shop_regex%/.*", role: IS_AUTHENTICATED_ANONYMOUSLY }
+                - { path: "%sylius.security.new_api_route%/shop/authentication-token", role: IS_AUTHENTICATED_ANONYMOUSLY }
+    +           - { path: "%sylius.security.new_api_shop_regex%/.*", role: IS_AUTHENTICATED_ANONYMOUSLY }
+     
 # UPGRADE FROM 0.27.0 to 0.28.0
 
 ## General update
