@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.29.0 (2020-11-09)
+
+- [#727](https://github.com/Sylius/Plus/issues/727) [Maintenance] Conflict with symfony doctrine bridge ([@GSadee](https://github.com/GSadee))
+- [#726](https://github.com/Sylius/Plus/issues/726) [API][Shop] Implement requesting a return ([@GSadee](https://github.com/GSadee))
+- [#728](https://github.com/Sylius/Plus/issues/728) [API][Shop] Secure return requests from unauthorised operations ([@GSadee](https://github.com/GSadee))
+- [#731](https://github.com/Sylius/Plus/issues/731) [Behat] Fix argument name after upgrade Behat to v3.8.0 ([@GSadee](https://github.com/GSadee))
+- [#732](https://github.com/Sylius/Plus/issues/732) [API][Swagger] Improve request body of request a return endpoint ([@GSadee](https://github.com/GSadee))
+- [#730](https://github.com/Sylius/Plus/issues/730) Don't include "/" in product variant's name and code ([@pamil](https://github.com/pamil))
+- [#733](https://github.com/Sylius/Plus/issues/733) [API][Swagger] fix content type ([@AdamKasp](https://github.com/AdamKasp))
+- [#729](https://github.com/Sylius/Plus/issues/729) [Api][Variants][InventorySource] Setting onHand value ([@AdamKasp](https://github.com/AdamKasp))
+- [#734](https://github.com/Sylius/Plus/issues/734) Make declaration of denormalizer methods compatible with interface ([@GSadee](https://github.com/GSadee))
+
 ## v0.28.1 (2020-10-27)
 
 - Unfinalized Behat pages
