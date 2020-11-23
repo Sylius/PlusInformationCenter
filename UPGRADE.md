@@ -1,3 +1,14 @@
+# UPGRADE FROM 0.29.0 to 0.30.0
+
+## General update
+
+```bash
+composer require "sylius/plus:0.30.*"
+```
+
+* `Sylius\Plus\Doctrine\ORM\InvoiceRepositoryInterface` extends now `Sylius\InvoicingPlugin\Doctrine\ORM\InvoiceRepositoryInterface`.
+* `Sylius\Plus\Doctrine\ORM\InvoiceRepository` extends now `Sylius\InvoicingPlugin\Doctrine\ORM\InvoiceRepository`.
+
 # UPGRADE FROM 0.28.X to 0.29.0
 
 ## General update
