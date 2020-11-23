@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v0.30.0 (2020-11-23)
+
+- [#736](https://github.com/Sylius/Plus/issues/736) [API] earning loyalty points from item total rules ([@arti0090](https://github.com/arti0090))
+- [#738](https://github.com/Sylius/Plus/issues/738) Fix Doctrine/Migrations configuration ([@Zales0123](https://github.com/Zales0123))
+- [#737](https://github.com/Sylius/Plus/issues/737) remove unused variable from channelContext class ([@arti0090](https://github.com/arti0090))
+- [#739](https://github.com/Sylius/Plus/issues/739) [API]Toggling inventory stock ([@Tomanhez](https://github.com/Tomanhez))
+- [#740](https://github.com/Sylius/Plus/issues/740) [Api] Add minor fixes in serialization ([@Tomanhez](https://github.com/Tomanhez))
+- [#741](https://github.com/Sylius/Plus/issues/741) Validation of return request order items ([@arti0090](https://github.com/arti0090))
+- [#742](https://github.com/Sylius/Plus/issues/742) Upgrade InvoicingPlugin to v0.12.0 ([@GSadee](https://github.com/GSadee))
+
 ## v0.29.0 (2020-11-09)
 
 - [#727](https://github.com/Sylius/Plus/issues/727) [Maintenance] Conflict with symfony doctrine bridge ([@GSadee](https://github.com/GSadee))
