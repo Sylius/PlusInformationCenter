@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## v0.31.0 (2020-12-07)
+
+- [#745](https://github.com/Sylius/Plus/issues/745) [Hot-Fix] Add conflict lcobucci/jwt  ([@Tomanhez](https://github.com/Tomanhez))
+- [#744](https://github.com/Sylius/Plus/issues/744) [Api][Shop] Cancelling return request ([@Tomanhez](https://github.com/Tomanhez))
+- [#747](https://github.com/Sylius/Plus/issues/747) Remove lcobucci/jwt v3.4 conflict ([@Tomanhez](https://github.com/Tomanhez))
+- [#746](https://github.com/Sylius/Plus/issues/746) [Api] See replacement order in account ([@Tomanhez](https://github.com/Tomanhez))
+- [#748](https://github.com/Sylius/Plus/issues/748) [Behat] Removing obsolete email tag ([@lchrusciel](https://github.com/lchrusciel))
+- [#750](https://github.com/Sylius/Plus/issues/750) [Api] See replacement order in account - minor fixes ([@Tomanhez](https://github.com/Tomanhez))
+- [#751](https://github.com/Sylius/Plus/issues/751) [Loyalty][Api] Not earning loyalty points as a guest. ([@AdamKasp](https://github.com/AdamKasp))
+- [#749](https://github.com/Sylius/Plus/issues/749) [Api] Informing with order are replacement ([@Tomanhez](https://github.com/Tomanhez))
+
 ## v0.30.0 (2020-11-23)
 
 - [#736](https://github.com/Sylius/Plus/issues/736) [API] earning loyalty points from item total rules ([@arti0090](https://github.com/arti0090))
