@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## v0.32.0 (2020-12-22)
+
+- [#753](https://github.com/Sylius/Plus/issues/753) [Behat][API] Remove unused argument from context for managing inventory sources ([@GSadee](https://github.com/GSadee))
+- [#754](https://github.com/Sylius/Plus/issues/754) [API] Implement browsing product variants' stocks per inventory source ([@GSadee](https://github.com/GSadee))
+- [#756](https://github.com/Sylius/Plus/issues/756) Improve README.md ([@pamil](https://github.com/pamil))
+- [#757](https://github.com/Sylius/Plus/issues/757) [API]modifying product variant stocks ([@arti0090](https://github.com/arti0090))
+- [#761](https://github.com/Sylius/Plus/issues/761) [HOTFIX] Conflict Sylius 1.8.6 ([@lchrusciel](https://github.com/lchrusciel))
+- [#759](https://github.com/Sylius/Plus/issues/759) [API] Earning loyalty points from items total to points ratio ([@arti0090](https://github.com/arti0090))
+- [#758](https://github.com/Sylius/Plus/issues/758) [API][Product] Setting up stock tracking of products ([@GSadee](https://github.com/GSadee))
+- [#762](https://github.com/Sylius/Plus/issues/762) [Api] Loyalty points on cart ([@Tomanhez](https://github.com/Tomanhez))
+- [#769](https://github.com/Sylius/Plus/issues/769) [API] Browsing loyalty rules ([@arti0090](https://github.com/arti0090))
+- [#773](https://github.com/Sylius/Plus/issues/773) [API]Change name of serialization attribute for loyalty rules ([@arti0090](https://github.com/arti0090))
+- [#772](https://github.com/Sylius/Plus/issues/772) [API] Browsing loyalty purchases ([@arti0090](https://github.com/arti0090))
+- [#770](https://github.com/Sylius/Plus/issues/770) [Api][Loyalty] Hide loyaltyPoints for visitor ([@Tomanhez](https://github.com/Tomanhez))
+- [#774](https://github.com/Sylius/Plus/issues/774) [Loyalty][API] Channel based point counting feature implemented ([@lchrusciel](https://github.com/lchrusciel))
+- [#760](https://github.com/Sylius/Plus/issues/760) Compatibility with Sylius 1.8.6 ([@lchrusciel](https://github.com/lchrusciel), [@GSadee](https://github.com/GSadee))
+- [#766](https://github.com/Sylius/Plus/issues/766) [Order] fix order query ([@AdamKasp](https://github.com/AdamKasp))
+- [#775](https://github.com/Sylius/Plus/issues/775) [API] Fix filename of loyalty rule configuration file ([@GSadee](https://github.com/GSadee))
+- [#776](https://github.com/Sylius/Plus/issues/776) Fix notes for v0.32.0 in UPGRADE file ([@GSadee](https://github.com/GSadee))
+
 ## v0.31.0 (2020-12-07)
 
 - [#745](https://github.com/Sylius/Plus/issues/745) [Hot-Fix] Add conflict lcobucci/jwt  ([@Tomanhez](https://github.com/Tomanhez))
