@@ -3,12 +3,12 @@
 ## General update
 
 ```bash
-composer require "sylius/plus:0.31.*"
+composer require "sylius/plus:0.32.*"
 ```
 
 * `Sylius\Plus\Loyalty\Application\Provider\OrderLoyaltyPointsProvider` class has been removed and the logic from it has been moved to `Sylius\Plus\Entity\OrderTrait`
-* `Sylius\Plus\Loyalty\Application\Provider\OrderLoyaltyPointsProviderInterface` class has been removed and all his logic was moved to `Sylius\Plus\Entity\OrderInterface`
-* `Sylius\Plus\Loyalty\Infrastructure\Twig\OrderLoyaltyPointsExtension` class has been removed and all his logic was moved to `Sylius\Plus\Entity\OrderTrait`
+* `Sylius\Plus\Loyalty\Application\Provider\OrderLoyaltyPointsProviderInterface` class has been removed and the logic from it has been moved to `Sylius\Plus\Entity\OrderInterface`
+* `Sylius\Plus\Loyalty\Infrastructure\Twig\OrderLoyaltyPointsExtension` class has been removed and the logic from it has been moved to `Sylius\Plus\Entity\OrderTrait`
 Now you can using all logic from `OrderLoyaltyPointsExtension` directly on `Order` entity
 
 # UPGRADE FROM 0.30.0 to 0.31.0
