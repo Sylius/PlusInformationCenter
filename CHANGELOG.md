@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## v0.33.0 (2021-01-26)
+
+- [#777](https://github.com/Sylius/Plus/issues/777) [API] adding loyalty purchases ([@arti0090](https://github.com/arti0090))
+- [#778](https://github.com/Sylius/Plus/issues/778) [Composer] Conflict with liip/imagine-bundle ([@GSadee](https://github.com/GSadee))
+- [#780](https://github.com/Sylius/Plus/issues/780) [API] Editing loyalty purchase ([@arti0090](https://github.com/arti0090))
+- [#781](https://github.com/Sylius/Plus/issues/781) [Composer] Revert liip imagine conflict ([@lchrusciel](https://github.com/lchrusciel))
+- [#755](https://github.com/Sylius/Plus/issues/755) Initialize GitHub actions ([@clem21](https://github.com/clem21), [@GSadee](https://github.com/GSadee))
+- [#783](https://github.com/Sylius/Plus/issues/783) Add conflict for symfony/polyfill-mbstring ([@Tomanhez](https://github.com/Tomanhez))
+- [#785](https://github.com/Sylius/Plus/issues/785) [API] Validating editing of loyalty purchase ([@arti0090](https://github.com/arti0090))
+- [#782](https://github.com/Sylius/Plus/issues/782) Add test for maintaining a last picked up cart ([@Tomanhez](https://github.com/Tomanhez))
+- [#787](https://github.com/Sylius/Plus/issues/787) [API][Loyalty] Seeing loyalty purchases available only in the channel ([@GSadee](https://github.com/GSadee))
+- [#790](https://github.com/Sylius/Plus/issues/790) [GMV] Fix failing test for report data query ([@GSadee](https://github.com/GSadee))
+- [#791](https://github.com/Sylius/Plus/issues/791) [API][Loyalty] Earning loyalty points from points per product rule action ([@GSadee](https://github.com/GSadee))
+- [#786](https://github.com/Sylius/Plus/issues/786) [Api][LoyaltyRule]Managing loyalty rule ([@Tomanhez](https://github.com/Tomanhez))
+- [#788](https://github.com/Sylius/Plus/issues/788) [API] specify stock amount ([@arti0090](https://github.com/arti0090))
+- [#793](https://github.com/Sylius/Plus/issues/793) [Api] Add fix for swagger in LoyaltyRule POST ([@Tomanhez](https://github.com/Tomanhez))
+- [#794](https://github.com/Sylius/Plus/issues/794) [Behat]fix and add missing tags ([@arti0090](https://github.com/arti0090))
+- [#795](https://github.com/Sylius/Plus/issues/795) [API] change loyalty rule and purchase identifiers ([@arti0090](https://github.com/arti0090))
+- [#789](https://github.com/Sylius/Plus/issues/789) [Api] Toggling loyalty rule ([@Tomanhez](https://github.com/Tomanhez))
+- [#796](https://github.com/Sylius/Plus/issues/796) [Composer][API] Temporarily lock api-platform/core on 2.5 version ([@GSadee](https://github.com/GSadee))
+
 ## v0.32.0 (2020-12-22)
 
 - [#753](https://github.com/Sylius/Plus/issues/753) [Behat][API] Remove unused argument from context for managing inventory sources ([@GSadee](https://github.com/GSadee))
