@@ -6,6 +6,7 @@ composer require "sylius/plus:0.34.*"
 ```
 
 * `Sylius\Plus\Loyalty\Application\Command\BuyLoyaltyPurchase` class constructor parameters has been modified from `__construct(string $customerEmail, string $loyaltyPurchaseCode)` to `__construct(string $loyaltyPurchaseCode, ?string $customerEmail = null)`
+* `Sylius\Plus\Loyalty\Infrastructure\DataTransformer\LoyaltyRuleActionDataTransformer` class has been replaced by `Sylius\Plus\Loyalty\Infrastructure\DataTransformer\LoyaltyRuleActionInputDataTransformer`
 
 # UPGRADE FROM 0.32.0 to 0.33.0
 
