@@ -1,3 +1,12 @@
+# UPGRADE FROM 0.33.0 to 0.34.0
+
+## General update
+```bash
+composer require "sylius/plus:0.34.*"
+```
+
+* `Sylius\Plus\Loyalty\Application\Command\BuyLoyaltyPurchase` class constructor parameters has been modified from `__construct(string $customerEmail, string $loyaltyPurchaseCode)` to `__construct(string $loyaltyPurchaseCode, ?string $customerEmail = null)`
+
 # UPGRADE FROM 0.32.0 to 0.33.0
 
 ## General update
