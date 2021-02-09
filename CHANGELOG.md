@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v0.34.0 (2021-02-09)
+
+- [#800](https://github.com/Sylius/Plus/issues/800) [API] Implement adding a multichannel loyalty rule ([@pamil](https://github.com/pamil))
+- [#802](https://github.com/Sylius/Plus/issues/802) Disable easy-coding-standard check in build ([@Tomanhez](https://github.com/Tomanhez), [@GSadee](https://github.com/GSadee))
+- [#803](https://github.com/Sylius/Plus/issues/803) Decouple Admin and Shop by using template from Core ([@GSadee](https://github.com/GSadee))
+- [#799](https://github.com/Sylius/Plus/issues/799) [API] buying loyalty purchases ([@arti0090](https://github.com/arti0090))
+- [#798](https://github.com/Sylius/Plus/issues/798) [Api] Add loyalty rule that is based on selected product + refactor LoyaltyRuleTransformers ([@Tomanhez](https://github.com/Tomanhez))
+- [#804](https://github.com/Sylius/Plus/issues/804) [Returns][Api] add validation for adding items to return request ([@AdamKasp](https://github.com/AdamKasp))
+- [#809](https://github.com/Sylius/Plus/issues/809) Replace private by protected specificators on models ([@Tomanhez](https://github.com/Tomanhez))
+- [#801](https://github.com/Sylius/Plus/issues/801) [Return request][Api] resolution list + validation ([@AdamKasp](https://github.com/AdamKasp))
+- [#807](https://github.com/Sylius/Plus/issues/807) [API] Implement scenarios for validating loyalty rule addition ([@GSadee](https://github.com/GSadee))
+- [#812](https://github.com/Sylius/Plus/issues/812) [API] validating loyalty rule addition part.2 ([@arti0090](https://github.com/arti0090))
+- [#811](https://github.com/Sylius/Plus/issues/811) [Api][Returns] minor fixes ([@AdamKasp](https://github.com/AdamKasp))
+- [#808](https://github.com/Sylius/Plus/issues/808) [Api][LoyaltyRule] Refactor loyalty rule action data transformer(add key to identificate services in contatiner) Replace LoyaltyRuleActionDataTransformerPass with tagged_iterator ([@Tomanhez](https://github.com/Tomanhez))
+- [#805](https://github.com/Sylius/Plus/issues/805) [API]buying loyalty purchase fixes ([@arti0090](https://github.com/arti0090))
+- [#771](https://github.com/Sylius/Plus/issues/771) Fix pagination of customer list ([@lchrusciel](https://github.com/lchrusciel), [@pamil](https://github.com/pamil), [@arti0090](https://github.com/arti0090), [@GSadee](https://github.com/GSadee))
+- [#813](https://github.com/Sylius/Plus/issues/813) [API] validating loyalty purchase add - new scenario ([@arti0090](https://github.com/arti0090))
+- [#814](https://github.com/Sylius/Plus/issues/814) [Api] Add fixes for configuration ([@Tomanhez](https://github.com/Tomanhez))
+- [#806](https://github.com/Sylius/Plus/issues/806) [Api][LoyaltyRule] Editing loyalty rule ([@Tomanhez](https://github.com/Tomanhez))
+- [#815](https://github.com/Sylius/Plus/issues/815) [Api] Add minor fixes for tests and DTO ([@Tomanhez](https://github.com/Tomanhez))
+- [#816](https://github.com/Sylius/Plus/issues/816) Add openapi_context for PUT LoyaltyRuleAction ([@Tomanhez](https://github.com/Tomanhez))
+- [#817](https://github.com/Sylius/Plus/issues/817) Add LICENSE file ([@pjedrzejewski](https://github.com/pjedrzejewski))
+- [#818](https://github.com/Sylius/Plus/issues/818) Remove unnecessary quotation mark form LICENSE file ([@GSadee](https://github.com/GSadee))
+- [#819](https://github.com/Sylius/Plus/issues/819) Add @internal tag to overwritten services from Grid ([@GSadee](https://github.com/GSadee))
+- [#752](https://github.com/Sylius/Plus/issues/752) [Loyalty] minor fixes ([@AdamKasp](https://github.com/AdamKasp))
+
 ## v0.33.0 (2021-01-26)
 
 - [#777](https://github.com/Sylius/Plus/issues/777) [API] adding loyalty purchases ([@arti0090](https://github.com/arti0090))
