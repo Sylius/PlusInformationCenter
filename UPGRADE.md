@@ -1,3 +1,18 @@
+# UPGRADE FROM 0.34.0 to 0.35.0
+
+## General update
+```bash
+composer require "sylius/plus:0.35.*"
+```
+
+* We've upgraded RefundPlugin to v1.0.0-RC.6 packages.
+    
+    Please follow [RefundPlugin's upgrade instructions](https://github.com/Sylius/RefundPlugin/blob/master/UPGRADE.md#upgrade-from-100-rc5-to-100-rc6).
+
+* `Sylius\Plus\Doctrine\ORM\CreditMemoRepositoryInterface` extends now `Sylius\RefundPlugin\Doctrine\ORM\CreditMemoRepositoryInterface`
+and `Sylius\Plus\Doctrine\ORM\CreditMemoRepository` extends now `Sylius\RefundPlugin\Doctrine\ORM\CreditMemoRepository`,
+so if you extended these files, you should change the base classes. 
+
 # UPGRADE FROM 0.33.0 to 0.34.0
 
 ## General update
