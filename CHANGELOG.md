@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v0.35.0 (2021-03-11)
+
+- [#823](https://github.com/Sylius/Plus/issues/823) [Loyalty] Buying loyalty purchase that will reset customer's loyalty points ([@GSadee](https://github.com/GSadee))
+- [#824](https://github.com/Sylius/Plus/issues/824) Upgrade RefundPlugin to v1.0.0-RC.6 ([@GSadee](https://github.com/GSadee))
+- [#825](https://github.com/Sylius/Plus/issues/825) Fix exception for inventory source with variant without name ([@AdamKasp](https://github.com/AdamKasp))
+- [#832](https://github.com/Sylius/Plus/issues/832) [Behat] Change name of suite and tag for splitting shipments ([@GSadee](https://github.com/GSadee))
+- [#833](https://github.com/Sylius/Plus/issues/833) [Behat][API] Split definitions of context services for admin and shop ([@GSadee](https://github.com/GSadee))
+- [#834](https://github.com/Sylius/Plus/issues/834) [API] Seeing return request details ([@arti0090](https://github.com/arti0090))
+- [#835](https://github.com/Sylius/Plus/issues/835) Added taxon behats, remove orm changes from #771 ([@SirDomin](https://github.com/SirDomin))
+
 ## v0.34.0 (2021-02-09)
 
 - [#800](https://github.com/Sylius/Plus/issues/800) [API] Implement adding a multichannel loyalty rule ([@pamil](https://github.com/pamil))
