@@ -1,3 +1,13 @@
+# UPGRADE FROM 0.35.0 to 0.36.0
+
+## General update
+```bash
+composer require "sylius/plus:0.36.*"
+```
+
+* You need to upgrade RefundPlugin to v1.0.0-RC.8
+  Please follow [RefundPlugin's upgrade instructions](https://github.com/Sylius/RefundPlugin/blob/master/UPGRADE.md#upgrade-from-100-rc7-to-100-rc8).
+
 # UPGRADE FROM 0.34.0 to 0.35.0
 
 ## General update
