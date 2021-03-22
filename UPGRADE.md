@@ -5,8 +5,25 @@
 composer require "sylius/plus:0.36.*"
 ```
 
+* You need to upgrade Sylius to v1.9.0.
+    Please follow [Sylius's upgrade instructions](https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.9.md).
+
 * You need to upgrade RefundPlugin to v1.0.0-RC.8
   Please follow [RefundPlugin's upgrade instructions](https://github.com/Sylius/RefundPlugin/blob/master/UPGRADE.md#upgrade-from-100-rc7-to-100-rc8).
+
+* Remove the `Resources/views/` part from templates paths, like in the following example: `@SyliusPlusPlugin/Resources/views/Grid/Field/_channels.html.twig` => `@SyliusPlusPlugin/Grid/Field/_channels.html.twig`
+
+* `Sylius\Plus\Doctrine\ORM\OrderItemUnitRepositoryInterface` extends now `Sylius\Bundle\CoreBundle\Doctrine\ORM\OrderItemUnitRepository`
+
+* `Sylius\Plus\Doctrine\ORM\OrderItemUnitRepository` extends now `Sylius\Component\Core\Repository\OrderItemUnitRepositoryInterface`
+
+* Below classes are removed and replaced by other from Sylius:
+  - `Sylius\Plus\Doctrine\ORM\OrderRepository` => `Sylius\Bundle\CoreBundle\Doctrine\ORM\OrderRepository`
+  - `Sylius\Plus\Doctrine\ORM\OrderRepositoryInterface` => `Sylius\Bundle\CoreBundle\Doctrine\ORM\OrderRepositoryInterface`
+  - `Sylius\Plus\DataProvider\OrderCollectionDataProvider` => `Sylius\Bundle\ApiBundle\DataProvider\OrderCollectionDataProvider`
+  - `Sylius\Plus\DataTransformer\CommandAwareInputDataTransformer` => `Sylius\Bundle\ApiBundle\DataTransformer\CommandAwareInputDataTransformer`
+  - `Sylius\Plus\Fixture\OptionsResolver\LazyOption` => `Sylius\Bundle\CoreBundle\Fixture\OptionsResolver\LazyOption`
+  - `Sylius\Plus\Fixture\OptionsResolver\ResourceNotFoundException` => `Sylius\Bundle\CoreBundle\Fixture\OptionsResolver\ResourceNotFoundException` 
 
 # UPGRADE FROM 0.34.0 to 0.35.0
 
@@ -15,25 +32,12 @@ composer require "sylius/plus:0.36.*"
 composer require "sylius/plus:0.35.*"
 ```
 
-* Remove the `Resources/views/` part from templates paths, like in the following example: `@SyliusPlusPlugin/Resources/views/Grid/Field/_channels.html.twig` => `@SyliusPlusPlugin/Grid/Field/_channels.html.twig`
-
-* You need to upgrade Sylius to v1.9.0.
-    Please follow [Sylius's upgrade instructions](https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.9.md).
-
-* You need to upgrade RefundPlugin to v1.0.0-RC.7
+* You need to upgrade RefundPlugin to v1.0.0-RC.6
     Please follow [RefundPlugin's upgrade instructions](https://github.com/Sylius/RefundPlugin/blob/master/UPGRADE.md#upgrade-from-100-rc5-to-100-rc6).
 
-* `Sylius\Plus\Doctrine\ORM\OrderItemUnitRepositoryInterface` extends now `Sylius\Bundle\CoreBundle\Doctrine\ORM\OrderItemUnitRepository`
-* `Sylius\Plus\Doctrine\ORM\OrderItemUnitRepository` extends now `Sylius\Component\Core\Repository\OrderItemUnitRepositoryInterface`
 * `Sylius\Plus\Doctrine\ORM\CreditMemoRepositoryInterface` extends now `Sylius\RefundPlugin\Doctrine\ORM\CreditMemoRepositoryInterface`
 and `Sylius\Plus\Doctrine\ORM\CreditMemoRepository` extends now `Sylius\RefundPlugin\Doctrine\ORM\CreditMemoRepository`,
 so if you extended these files, you should change the base classes.
-
-* Below classes are removed and replaced by other from Sylius:
-  - `Sylius\Plus\Doctrine\ORM\OrderRepository` => `Sylius\Bundle\CoreBundle\Doctrine\ORM\OrderRepository`
-  - `Sylius\Plus\Doctrine\ORM\OrderRepositoryInterface` => `Sylius\Bundle\CoreBundle\Doctrine\ORM\OrderRepositoryInterface`
-  - `Sylius\Plus\DataProvider\OrderCollectionDataProvider` => `Sylius\Bundle\ApiBundle\DataProvider\OrderCollectionDataProvider`
-  - `Sylius\Plus\DataTransformer\CommandAwareInputDataTransformer` => `Sylius\Bundle\ApiBundle\DataTransformer\CommandAwareInputDataTransformer`
 
 # UPGRADE FROM 0.33.0 to 0.34.0
 

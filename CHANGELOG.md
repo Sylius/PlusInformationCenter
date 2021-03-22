@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v0.36.0 (2021-03-22)
+
+- [#831](https://github.com/Sylius/Plus/issues/831) Toggle doctrine migration ([@arti0090](https://github.com/arti0090))
+- [#836](https://github.com/Sylius/Plus/issues/836) Add gitkeep file so src/Migration directory stays in code ([@arti0090](https://github.com/arti0090))
+- [#829](https://github.com/Sylius/Plus/issues/829) Update to Sylius/Sylius 1.9 and Symfony 5 ([@Tomanhez](https://github.com/Tomanhez))
+- [#837](https://github.com/Sylius/Plus/issues/837) [Bug] Customer list problem fix ([@SirDomin](https://github.com/SirDomin))
+- [#838](https://github.com/Sylius/Plus/issues/838) early return instead of throwing error ([@SirDomin](https://github.com/SirDomin))
+- [#841](https://github.com/Sylius/Plus/issues/841) [ChannelAdmin] Add early return instead of exception when there is no channel pricing field in form type ([@GSadee](https://github.com/GSadee))
+- [#840](https://github.com/Sylius/Plus/issues/840) [API][PartialShipping] Add possibility to partially ship an order ([@GSadee](https://github.com/GSadee))
+- [#839](https://github.com/Sylius/Plus/issues/839) Submitted RR ([@Tomanhez](https://github.com/Tomanhez))
+- [#842](https://github.com/Sylius/Plus/issues/842) Upgrade invoicing & refund plugin version ([@arti0090](https://github.com/arti0090))
+- [#843](https://github.com/Sylius/Plus/issues/843) [Docs] Add note in upgrade file for RefundPlugin ([@arti0090](https://github.com/arti0090))
+- [#844](https://github.com/Sylius/Plus/issues/844) Set GitHub Actions timeout to 30 minutes to prevent us from bankruptcy ([@pamil](https://github.com/pamil))
+
 ## v0.35.0 (2021-03-11)
 
 - [#823](https://github.com/Sylius/Plus/issues/823) [Loyalty] Buying loyalty purchase that will reset customer's loyalty points ([@GSadee](https://github.com/GSadee))
