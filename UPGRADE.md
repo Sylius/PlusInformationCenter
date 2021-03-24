@@ -1,3 +1,20 @@
+# UPGRADE FROM 0.36.0 to 0.37.0
+
+## General update
+```bash
+composer require "sylius/plus:0.37.*"
+```
+
+* `Sylius\Plus\Rbac\Application\Privilege\CompositePrivilege` class constructor parameters has been modified 
+from `__construct(FilesystemCache $filesystemCache)` to `__construct(CacheInterface $cache)`
+
+* `Sylius\Plus\Rbac\Infrastructure\Twig\RoutingExtension` class has become finalized and its constructor parameters has been modified 
+from `__construct(UrlGeneratorInterface $generator, AdminPermissionResolverInterface $adminPermissionResolver)` 
+to `__construct(AdminPermissionResolverInterface $adminPermissionResolver, BaseRoutingExtension $baseRoutingExtension)`
+
+* `Sylius\Plus\Rbac\Infrastructure\Twig\HttpKernelExtension` and `Sylius\Plus\Rbac\Infrastructure\Twig\RoutingExtension` 
+extend now `Twig\Extension\AbstractExtension` instead of `Symfony\Bridge\Twig\Extension\HttpKernelExtension`
+
 # UPGRADE FROM 0.35.0 to 0.36.0
 
 ## General update
