@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.37.0 (2021-03-25)
+
+- [#845](https://github.com/Sylius/Plus/issues/845) [CI] Force Symfony 5.2 libraries & add real Symfony 5 support ([@lchrusciel](https://github.com/lchrusciel), [@pamil](https://github.com/pamil), [@Tomanhez](https://github.com/Tomanhez), [@GSadee](https://github.com/GSadee))
+- [#846](https://github.com/Sylius/Plus/issues/846) Fix note about upgrading Plus to 0.36.0 version ([@AdamKasp](https://github.com/AdamKasp), [@GSadee](https://github.com/GSadee))
+
 ## v0.36.0 (2021-03-22)
 
 - [#831](https://github.com/Sylius/Plus/issues/831) Toggle doctrine migration ([@arti0090](https://github.com/arti0090))
