@@ -42,6 +42,9 @@ composer require "sylius/plus:0.36.*"
   - `Sylius\Plus\Fixture\OptionsResolver\LazyOption` => `Sylius\Bundle\CoreBundle\Fixture\OptionsResolver\LazyOption`
   - `Sylius\Plus\Fixture\OptionsResolver\ResourceNotFoundException` => `Sylius\Bundle\CoreBundle\Fixture\OptionsResolver\ResourceNotFoundException` 
 
+After these changes `Sylius Plus` will work with `Sylius 1.9` and `Symfony 4.4`, if you want to upgrade to `Symfony 5.2`, 
+you need to upgrade `Sylius Plus` to next version (`0.37`).
+
 # UPGRADE FROM 0.34.0 to 0.35.0
 
 ## General update
