@@ -1,3 +1,12 @@
+# UPGRADE FROM 0.37.0 to 0.38.0
+
+## General update
+```bash
+composer require "sylius/plus:0.38.*"
+```
+
+* The key `shipmentId` has been changed to `shipment` in request body of endpoint `POST /admin/shipments`
+
 # UPGRADE FROM 0.36.0 to 0.37.0
 
 ## General update
