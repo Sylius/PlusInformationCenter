@@ -52,6 +52,9 @@ you need to upgrade `Sylius Plus` to next version (`0.37`).
 composer require "sylius/plus:0.35.*"
 ```
 
+All versions including this and below are not compatible with `Sylius 1.9` out of the box. If this is your case,
+please change the requirement in `composer.json` to: `"sylius/sylius": "~1.8.*"`
+
 * You need to upgrade RefundPlugin to v1.0.0-RC.6
     Please follow [RefundPlugin's upgrade instructions](https://github.com/Sylius/RefundPlugin/blob/master/UPGRADE.md#upgrade-from-100-rc5-to-100-rc6).
 
