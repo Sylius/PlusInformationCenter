@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.38.0 (2021-04-06)
+
+- [#847](https://github.com/Sylius/Plus/issues/847) [Behat][Api]Cover behat scenarios for partial shipments ([@arti0090](https://github.com/arti0090))
+- [#848](https://github.com/Sylius/Plus/issues/848) [GMV] Add possibility to choose a day while downloading a report ([@GSadee](https://github.com/GSadee))
+- [#850](https://github.com/Sylius/Plus/issues/850) [GMV] Refactor GMV report form ([@GSadee](https://github.com/GSadee), [@SirDomin](https://github.com/SirDomin))
+- [#852](https://github.com/Sylius/Plus/issues/852) [docs] add note about supported sylius version ([@AdamKasp](https://github.com/AdamKasp))
+- [#851](https://github.com/Sylius/Plus/issues/851) [API] Validating partial shipment ([@arti0090](https://github.com/arti0090))
+- [#854](https://github.com/Sylius/Plus/issues/854) [API][PartialShipping] Fix serializer name of shipment attribute ([@GSadee](https://github.com/GSadee))
+- [#853](https://github.com/Sylius/Plus/issues/853) [API]Partial ship units validation ([@arti0090](https://github.com/arti0090), [@GSadee](https://github.com/GSadee))
+- [#855](https://github.com/Sylius/Plus/issues/855) Remove conflicts with doctrine ([@GSadee](https://github.com/GSadee))
+- [#856](https://github.com/Sylius/Plus/issues/856) [Inventory] Fix mapping in shipment trait ([@lchrusciel](https://github.com/lchrusciel))
+
 ## v0.37.0 (2021-03-25)
 
 - [#845](https://github.com/Sylius/Plus/issues/845) [CI] Force Symfony 5.2 libraries & add real Symfony 5 support ([@lchrusciel](https://github.com/lchrusciel), [@pamil](https://github.com/pamil), [@Tomanhez](https://github.com/Tomanhez), [@GSadee](https://github.com/GSadee))
