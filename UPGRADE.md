@@ -1,3 +1,13 @@
+# UPGRADE FROM 0.38.0 to 0.39.0
+
+## General update
+```bash
+composer require "sylius/plus:0.39.*"
+```
+
+* Definition of route `sylius_plus_admin_shipment_split` has been changed, now it uses custom controller 
+that dispatches `SplitAndSendShipment` command instead of using `ResourceController` with route configuration.
+
 # UPGRADE FROM 0.37.0 to 0.38.0
 
 ## General update
