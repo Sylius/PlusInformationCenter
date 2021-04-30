@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## v0.39.0 (2021-04-30)
+
+- [#859](https://github.com/Sylius/Plus/issues/859) Add validation for special symbols on code ([@GSadee](https://github.com/GSadee))
+- [#861](https://github.com/Sylius/Plus/issues/861) fix bulk action ([@AdamKasp](https://github.com/AdamKasp))
+- [#862](https://github.com/Sylius/Plus/issues/862) [Behat][API] Refactor and enable in API context the scenario for adding product available in multiple inventory sources to cart ([@GSadee](https://github.com/GSadee))
+- [#863](https://github.com/Sylius/Plus/issues/863) [API][Cart] adding not tracked product ([@AdamKasp](https://github.com/AdamKasp))
+- [#865](https://github.com/Sylius/Plus/issues/865) [UI][PartialShipping] Changing inventory source while partially shipping order ([@Tomanhez](https://github.com/Tomanhez), [@GSadee](https://github.com/GSadee))
+- [#866](https://github.com/Sylius/Plus/issues/866) [API][PartialShipping] Changing inventory source while partially shipping order ([@GSadee](https://github.com/GSadee))
+- [#868](https://github.com/Sylius/Plus/issues/868) [PartialShipping] Fix splitting shipment form when there is a simple product ([@GSadee](https://github.com/GSadee))
+- [#864](https://github.com/Sylius/Plus/issues/864) [RBAC] Always return true if request not found in AdminPermissionResolver ([@lchrusciel](https://github.com/lchrusciel))
+
 ## v0.38.0 (2021-04-06)
 
 - [#847](https://github.com/Sylius/Plus/issues/847) [Behat][Api]Cover behat scenarios for partial shipments ([@arti0090](https://github.com/arti0090))
