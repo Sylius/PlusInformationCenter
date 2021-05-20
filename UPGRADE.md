@@ -1,3 +1,9 @@
+# UPGRADE FROM 0.39.0 to 0.40.0
+
+## Buses
+We decided to unify the naming of all message buses across Sylius products.
+Command buses `sylius_plus.inventory.command_bus`, `sylius_plus.returns.command_bus` and `sylius_plus.loyalty.command_bus` have been replaced with `sylius.command_bus`.
+
 # UPGRADE FROM 0.38.0 to 0.39.0
 
 ## General update
