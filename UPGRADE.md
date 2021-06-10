@@ -1,8 +1,19 @@
 # UPGRADE FROM 0.39.0 to 0.40.0
 
 ## Buses
-We decided to unify the naming of all message buses across Sylius products.
-Command buses `sylius_plus.inventory.command_bus`, `sylius_plus.returns.command_bus` and `sylius_plus.loyalty.command_bus` have been replaced with `sylius.command_bus`.
+* We decided to unify the naming of all message buses across Sylius products.
+  Command buses `sylius_plus.inventory.command_bus`, `sylius_plus.returns.command_bus` and `sylius_plus.loyalty.command_bus` have been replaced with `sylius.command_bus`.
+
+## InventorySourceStockUpdater
+* Methods `update` and `increment` of `Sylius\Plus\Inventory\Application\Updater\InventorySourceStockUpdaterInterface` have changed return types from `void` to `InventorySourceStockInterface`  `Sylius\Plus\Inventory\Application\Updater\InventorySourceStockUpdater` has:
+
+* The constructor of `Sylius\Plus\Inventory\Application\Updater\InventorySourceStockUpdater` has been changed
+  from `public function __construct(FactoryInterface $inventorySourceStockFactory, RepositoryInterface $inventorySourceStockRepository, ObjectManager $objectManager)`
+  to `public function __construct(FactoryInterface $inventorySourceStockFactory)`
+
+* The constructor of `Sylius\Plus\Returns\Application\CommandHandler\ReturnUnitsToInventoryHandler` takes `RepositoryInterface $inventorySourceStockRepository` as the 3rd argument
+
+* The return type of method `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperator::returnUnitToInventorySource` has been changed from `void` to `?InventorySourceStockInterface`
 
 # UPGRADE FROM 0.38.0 to 0.39.0
 
