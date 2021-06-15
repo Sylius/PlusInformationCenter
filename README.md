@@ -50,13 +50,15 @@ Sylius Plus documentation can be found on [docs.sylius.com](https://docs.sylius.
         java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone.jar
         ```
 
-    4. Run test application's webserver on `localhost:8080`:
+    4. Take a look how to install symfony webserver [here](https://symfony.com/doc/current/setup/symfony_server.html#installation)
+
+    5. Run test application's webserver on `localhost:8080`:
 
         ```bash
-        (cd tests/Application && APP_ENV=test bin/console server:run localhost:8080 -d public)
+        (cd tests/Application && APP_ENV=test symfony server:start --port=8080 --dir=public --daemon)
         ```
 
-    5. Run Behat:
+    6. Run Behat:
 
         ```bash
         vendor/bin/behat --tags="@javascript"
