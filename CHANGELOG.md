@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## v0.40.0 (2021-06-24)
+
+- [#870](https://github.com/Sylius/Plus/issues/870) [Api] Add customers id next to token ([@Tomanhez](https://github.com/Tomanhez))
+- [#872](https://github.com/Sylius/Plus/issues/872) [OAuth] Adjust user provider to work properly with customer pools ([@GSadee](https://github.com/GSadee))
+- [#873](https://github.com/Sylius/Plus/issues/873) [API][Inventory] Secure adding product to cart with insufficient stock ([@GSadee](https://github.com/GSadee))
+- [#871](https://github.com/Sylius/Plus/issues/871) change buses to sylius_default.bus ([@SirDomin](https://github.com/SirDomin))
+- [#875](https://github.com/Sylius/Plus/issues/875) [API] Fix product variant normalizer after upgrade to Sylius 1.9.4 ([@GSadee](https://github.com/GSadee))
+- [#878](https://github.com/Sylius/Plus/issues/878) Use Symfony 5.2.* with github actions ([@Tomanhez](https://github.com/Tomanhez))
+- [#879](https://github.com/Sylius/Plus/issues/879) Fix doctrine bundle configuration ([@Tomanhez](https://github.com/Tomanhez))
+- [#882](https://github.com/Sylius/Plus/issues/882) Fixes after upgrade to RefundPlugin v1.0.0-RC.1 ([@GSadee](https://github.com/GSadee))
+- [#881](https://github.com/Sylius/Plus/issues/881) [Inventory] Use InventorySourceStockInterface instead of InventorySourceStock as target entity ([@GSadee](https://github.com/GSadee))
+- [#876](https://github.com/Sylius/Plus/issues/876) [Inventory] InventorySourceStockUpdater Fix ([@Tomanhez](https://github.com/Tomanhez))
+- [#886](https://github.com/Sylius/Plus/issues/886) Add item when items in cart are not eligible ([@arti0090](https://github.com/arti0090))
+- [#887](https://github.com/Sylius/Plus/issues/887) Changed AvailabilityCheckerInterface from core to plus ([@arti0090](https://github.com/arti0090))
+- [#888](https://github.com/Sylius/Plus/issues/888) [Minor] Flush removed from handler ([@lchrusciel](https://github.com/lchrusciel))
+- [#889](https://github.com/Sylius/Plus/issues/889) Remove flushes from handlers ([@GSadee](https://github.com/GSadee))
+- [#891](https://github.com/Sylius/Plus/issues/891) [Admin][Api][Customer][Returns] Accepting & rejecting a return request ([@Arminek](https://github.com/Arminek))
+- [#893](https://github.com/Sylius/Plus/issues/893) [API][Returns] Return return request in response after accepting/rejecting ([@GSadee](https://github.com/GSadee))
+
 ## v0.39.0 (2021-04-30)
 
 - [#859](https://github.com/Sylius/Plus/issues/859) Add validation for special symbols on code ([@GSadee](https://github.com/GSadee))
