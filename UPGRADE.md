@@ -1,3 +1,32 @@
+# UPGRADE FROM 0.40.0 to 1.0.0-alpha
+
+## Sylius version
+
+* Since v0.40.0, the recommended Sylius version to use with SyliusPlus is `1.10.*`. If you still use Sylius `1.9.*`, you need
+  to override some resources api configurations. You can find them in `vendor/sylius/plus/etc/sylius-1.9/Resources/config/api_resources/`.
+
+  Changes summary:
+    - `Customer.xml` - added slash after `customers` in line 24
+    - `LoyaltyPurchase.xml` - all `loyalty-purchases/{code}` changed to `loyalty-purchases/{id}`
+    - `Order.xml` - all `orders/{tokenValue}` changed to `orders/{id}`
+    - `ProductVariant.xml` - all `product-variants/{code}` changed to `product-variants/{id}`
+    - `Shipment.xml` - `admin_ship` item operation changed to use service method rather than custom command (line 105)
+    ```xml
+      <!-- Before -->
+      <attribute name="messenger">input</attribute>
+      <attribute name="input">Sylius\Bundle\ApiBundle\Command\Checkout\ShipShipment</attribute>
+      <!-- After -->
+      <attribute name="controller">sylius.api.shipment_state_machine_transition_applicator::ship</attribute>
+    ```
+    - `OrderItem.xml` - `<property name="variant" readableLink="false" writableLink="false"/>` property added to display variant
+      as IRI
+
+  If you did not change anything in these configurations, use following command to override required files:
+
+  ```shell
+  cp -R vendor/sylius/plus/etc/sylius-1.9/Resources/config/api_resources/* config/api_platform/
+  ```
+
 # UPGRADE FROM 0.39.0 to 0.40.0
 
 ## Buses
