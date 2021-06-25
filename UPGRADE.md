@@ -1,8 +1,8 @@
-# UPGRADE FROM 0.40.0 to 1.0.0-alpha
+# UPGRADE FROM 0.40.0 to 1.0.0-ALPHA.1
 
 ## Sylius version
 
-* Since v0.40.0, the recommended Sylius version to use with SyliusPlus is `1.10.*`. If you still use Sylius `1.9.*`, you need
+* Since 1.0.0-ALPHA.1, the recommended Sylius version to use with SyliusPlus is `1.10.*`. If you still use Sylius `1.9.*`, you need
   to override some resources api configurations. You can find them in `vendor/sylius/plus/etc/sylius-1.9/Resources/config/api_resources/`.
 
   Changes summary:
@@ -23,7 +23,7 @@
 
   If you did not change anything in these configurations, use following command to override required files:
 
-  ```shell
+  ```bash
   cp -R vendor/sylius/plus/etc/sylius-1.9/Resources/config/api_resources/* config/api_platform/
   ```
 
