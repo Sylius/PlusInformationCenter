@@ -1,9 +1,14 @@
 # UPGRADE FROM 0.40.0 to 1.0.0-ALPHA.1
 
-## Sylius version
+## General update
+```bash
+composer require "sylius/plus:1.0.0@alpha"
+```
 
-* Since 1.0.0-ALPHA.1, the recommended Sylius version to use with SyliusPlus is `1.10.*`. If you still use Sylius `1.9.*`, you need
-  to override some resources api configurations. You can find them in `vendor/sylius/plus/etc/sylius-1.9/Resources/config/api_resources/`.
+* Since 1.0.0-ALPHA.1, the recommended Sylius version to use with SyliusPlus is `1.10.*`. If you still use Sylius `1.9.*`, you need to
+  override some resources api configurations. You can find them in `vendor/sylius/plus/etc/sylius-1.9/Resources/config/api_resources/`.
+
+## Changes for 1.9.*
 
   Changes summary:
     - `Customer.xml` - added slash after `customers` in line 24
@@ -25,9 +30,26 @@
 
   ```bash
   cp -R vendor/sylius/plus/etc/sylius-1.9/Resources/config/api_resources/* config/api_platform/
+  rm vendor/sylius/plus/src/Resources/config/api_resources/Shipment.xml
   ```
 
+* Remove deprecated api routing:
+
+  .. code-block:: yaml
+
+        // config/routes/sylius_admin_api.yaml:
+        #...
+
+        sylius_plus_admin_api:
+            resource: "@SyliusPlusPlugin/Resources/config/api_routing.yaml"
+            prefix: /api/v1
+
 # UPGRADE FROM 0.39.0 to 0.40.0
+
+## General update
+```bash
+composer require "sylius/plus:0.40.*"
+```
 
 ## Buses
 * We decided to unify the naming of all message buses across Sylius products.
