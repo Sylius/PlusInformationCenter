@@ -2,7 +2,7 @@
 
 ## General update
 ```bash
-composer require "sylius/plus:1.0.0@alpha"
+composer require "sylius/plus:1.0.0-ALPHA.1"
 ```
 
 * Since 1.0.0-ALPHA.1, the recommended Sylius version to use with SyliusPlus is `1.10.*`. If you still use Sylius `1.9.*`, you need to
