@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v1.0.0-ALPHA.1 (2021-07-26)
+
+- [#884](https://github.com/Sylius/Plus/issues/884) Add support for Sylius 1.10 ([@AdamKasp](https://github.com/AdamKasp), [@GSadee](https://github.com/GSadee), [@Zales0123](https://github.com/Zales0123))
+- [#894](https://github.com/Sylius/Plus/issues/894) Small UPGRADE file fixes after #884 review ([@Zales0123](https://github.com/Zales0123))
+- [#897](https://github.com/Sylius/Plus/issues/897) Upgrade to stable Sylius 1.10 ([@GSadee](https://github.com/GSadee))
+- [#896](https://github.com/Sylius/Plus/issues/896) Update steps in upgrade file ([@Tomanhez](https://github.com/Tomanhez))
+- [#895](https://github.com/Sylius/Plus/issues/895) [BUG] Adding product review as guest ([@arti0090](https://github.com/arti0090))
+- [#899](https://github.com/Sylius/Plus/issues/899) [FIX] Change how 1.9 is build with product review validator ([@arti0090](https://github.com/arti0090))
+- [#900](https://github.com/Sylius/Plus/issues/900) Upgrade to stable RefundPlugin 1.0 ([@GSadee](https://github.com/GSadee))
+- [#901](https://github.com/Sylius/Plus/issues/901) [Composer] Add psr/simple-cache to dev requirements due to problem with installation ([@GSadee](https://github.com/GSadee))
+- [#902](https://github.com/Sylius/Plus/issues/902) [Composer] Move psr/simple-cache from dev requirements ([@GSadee](https://github.com/GSadee))
+- [#903](https://github.com/Sylius/Plus/issues/903) [Composer] Remove friendsofsymfony/oauth-server-bundle from requirements ([@GSadee](https://github.com/GSadee))
+- [#904](https://github.com/Sylius/Plus/issues/904) [GitHub Actions] Configure workflow to run on the workflow_dispatch event ([@GSadee](https://github.com/GSadee))
+
 ## v0.40.0 (2021-06-24)
 
 - [#870](https://github.com/Sylius/Plus/issues/870) [Api] Add customers id next to token ([@Tomanhez](https://github.com/Tomanhez))
