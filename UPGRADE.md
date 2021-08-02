@@ -1,3 +1,13 @@
+# UPGRADE FROM 1.0.0-ALPHA.1 to 1.0.0-ALPHA.2
+
+## General update
+```bash
+composer require "sylius/plus:1.0.0-ALPHA.2"
+```
+
+* `ShipmentInventorySourceAssignerInterface $shipmentInventorySourceAssigner` has been added as the 4th argument 
+  in the constructor of `Sylius\Plus\Inventory\Application\Operator\InventoryOperator`
+
 # UPGRADE FROM 0.40.0 to 1.0.0-ALPHA.1
 
 ## General update
