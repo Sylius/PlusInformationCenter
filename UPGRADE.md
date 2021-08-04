@@ -1,5 +1,14 @@
 # UPGRADE FROM 1.0.0-ALPHA.1 to 1.0.0-ALPHA.2
 
+## Potential BC-breaks
+
+* Callbacks declared on state machine in `Returns/Infrastructure/Resources/config/state_machine/` and files
+  `Inventory/Infrastructure/Resources/config/state_machine.yaml`,
+  `PartialShipping/Infrastructure/Resources/config/state_machine.yml`,
+  `Resources/config/config.yaml`,
+  have now priorities declared, if you modified them in past this could lead to potential BC break.
+  Please adjust your priorities if needed. Note that those priorities are executed in ascending order.
+
 ## General update
 ```bash
 composer require "sylius/plus:1.0.0-ALPHA.2"
