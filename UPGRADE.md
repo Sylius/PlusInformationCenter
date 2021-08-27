@@ -17,6 +17,17 @@ composer require "sylius/plus:1.0.0-ALPHA.2"
 * `ShipmentInventorySourceAssignerInterface $shipmentInventorySourceAssigner` has been added as the 4th argument 
   in the constructor of `Sylius\Plus\Inventory\Application\Operator\InventoryOperator`
 
+1. Endpoints with changed code to IRI:
+
+POST on `/api/v2/shop/account/loyalty-points-transactions`:
+
+````
+{
+    - "loyaltyPurchaseCode": "string",
+    + "loyaltyPurchase": "string",
+}
+````
+
 # UPGRADE FROM 0.40.0 to 1.0.0-ALPHA.1
 
 ## General update
