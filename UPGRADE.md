@@ -10,6 +10,7 @@
   Please adjust your priorities if needed. Note that those priorities are executed in ascending order.
 
 ## General update
+
 ```bash
 composer require "sylius/plus:1.0.0-ALPHA.2"
 ```
@@ -17,7 +18,7 @@ composer require "sylius/plus:1.0.0-ALPHA.2"
 * `ShipmentInventorySourceAssignerInterface $shipmentInventorySourceAssigner` has been added as the 4th argument 
   in the constructor of `Sylius\Plus\Inventory\Application\Operator\InventoryOperator`
 
-1. Endpoints with changed code to IRI:
+* Endpoints with changed code to IRI:
 
 POST on `/api/v2/shop/account/loyalty-points-transactions`:
 
@@ -27,6 +28,9 @@ POST on `/api/v2/shop/account/loyalty-points-transactions`:
     + "loyaltyPurchase": "string",
 }
 ````
+
+* The `Sylius\Plus\Converter\InvoiceShopBillingDataConverter` has been removed in favor of decorating the factory
+   `Sylius\Plus\BusinessUnits\Application\Factory`.
 
 # UPGRADE FROM 0.40.0 to 1.0.0-ALPHA.1
 
