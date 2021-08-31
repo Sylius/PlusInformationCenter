@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## v1.0.0-ALPHA.2 (2021-08-31)
+
+- [#908](https://github.com/Sylius/Plus/issues/908) Fix version of Plus requirement for v1.0.0-ALPHA.1 in UPGRADE file ([@GSadee](https://github.com/GSadee))
+- [#907](https://github.com/Sylius/Plus/issues/907) [Maintenance] Unify split shipping & return tags for admin ([@lchrusciel](https://github.com/lchrusciel))
+- [#910](https://github.com/Sylius/Plus/issues/910) Change username and email in workflow for synchronization with PlusInformationCenter ([@GSadee](https://github.com/GSadee))
+- [#909](https://github.com/Sylius/Plus/issues/909) [Inventory] Add tracked product to cart with untracked product ([@GSadee](https://github.com/GSadee))
+- [#912](https://github.com/Sylius/Plus/issues/912) Fixes after Sylius tags 1.9.7 and 1.10.1 ([@GSadee](https://github.com/GSadee))
+- [#911](https://github.com/Sylius/Plus/issues/911) [Inventory] Resolve problem with unassigned inventory source due to wrong order of callbacks ([@GSadee](https://github.com/GSadee))
+- [#913](https://github.com/Sylius/Plus/issues/913) [SM] Change priorities of State Machine callbacks ([@arti0090](https://github.com/arti0090))
+- [#915](https://github.com/Sylius/Plus/issues/915) Fix changing priorities of state machine callbacks ([@GSadee](https://github.com/GSadee))
+- [#918](https://github.com/Sylius/Plus/issues/918) [Admin][Dashboard] fix customers calculation for channels ([@SirDomin](https://github.com/SirDomin), [@Tomanhez](https://github.com/Tomanhez))
+- [#917](https://github.com/Sylius/Plus/issues/917) Update InvoicingPlugin ([@Tomanhez](https://github.com/Tomanhez))
+- [#914](https://github.com/Sylius/Plus/issues/914) [Api]Use iri instead of code in commands and models ([@Tomanhez](https://github.com/Tomanhez), [@Zales0123](https://github.com/Zales0123))
+- [#920](https://github.com/Sylius/Plus/issues/920) Upgrade InvoicingPlugin to 0.18 version ([@GSadee](https://github.com/GSadee), [@Arminek](https://github.com/Arminek))
+
 ## v1.0.0-ALPHA.1 (2021-07-26)
 
 - [#884](https://github.com/Sylius/Plus/issues/884) Add support for Sylius 1.10 ([@AdamKasp](https://github.com/AdamKasp), [@GSadee](https://github.com/GSadee), [@Zales0123](https://github.com/Zales0123))
