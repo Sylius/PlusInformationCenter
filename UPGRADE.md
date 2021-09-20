@@ -1,3 +1,23 @@
+# UPGRADE FROM 1.0.0-ALPHA.2 to 1.0.0-ALPHA.3
+
+1. The return types of `Sylius\Plus\Loyalty\Domain\Model\LoyaltyPointsTransactionInterface` methods have been changed:
+
+    ```diff
+    +   public function getType(): ?string;
+    -   public function getType(): string;
+    +   public function getPointsValue(): ?string;
+    -   public function getPointsValue(): string;
+   ```
+ 
+1. The return types of `Sylius\Plus\Returns\Application\Command\RequestReturn` methods have been changed:
+
+    ```diff
+    +   public function orderNumber(): ?string;
+    -   public function orderNumber(): string;
+    +   public function currencyCode(): ?string;
+    -   public function currencyCode(): string;
+   ```
+
 # UPGRADE FROM 1.0.0-ALPHA.1 to 1.0.0-ALPHA.2
 
 ## Potential BC-breaks
