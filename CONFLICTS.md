@@ -3,11 +3,10 @@
 This document explains why certain conflicts were added to `composer.json` and
 references related issues.
 
- - `symfony/polyfill-mbstring:^1.22.0`:
+- `doctrine/orm:^2.10.0`:
 
-   `polyfill-mbstring` ^1.22.0 causes a problem with static analysis on PHP 7.3. 
-   After running `vendor/bin/psalm --show-info=false --php-version=7.3`, the following exception is thrown:
+  This version causes a problem with the creation of nested taxons by throwing the exception:
 
-   `ParseError - vendor/symfony/polyfill-mbstring/bootstrap80.php:125:86 - Syntax error, unexpected '=' on line 125 (see https://psalm.dev/173) function mb_scrub(string $string, string $encoding = null): string { $encoding ??= mb_internal_encoding(); return mb_convert_encoding($string, $encoding, $encoding); }`
+  `Gedmo\Exception\UnexpectedValueException: Root cannot be changed manually, change parent instead in vendor/gedmo/doctrine-extensions/src/Tree/Strategy/ORM/Nested.php:145`
 
-   References: https://github.com/vimeo/psalm/issues/4961
+  References: https://github.com/doctrine-extensions/DoctrineExtensions/issues/2155
