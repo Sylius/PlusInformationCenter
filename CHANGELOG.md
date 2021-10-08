@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v1.0.0-ALPHA.3 (2021-10-08)
+
+- [#921](https://github.com/Sylius/Plus/issues/921) [Config] change dependency to use resource ([@SirDomin](https://github.com/SirDomin))
+- [#922](https://github.com/Sylius/Plus/issues/922) Remove oauth server bundle ([@AdamKasp](https://github.com/AdamKasp))
+- [#923](https://github.com/Sylius/Plus/issues/923) Use PHP 7.4 syntax ([@GSadee](https://github.com/GSadee))
+- [#927](https://github.com/Sylius/Plus/issues/927) [API] Allow for not existent variants in cart item availability checker ([@lchrusciel](https://github.com/lchrusciel))
+- [#929](https://github.com/Sylius/Plus/issues/929) [Maintenance] Fix build by updating composer conflicts ([@GSadee](https://github.com/GSadee))
+
 ## v1.0.0-ALPHA.2 (2021-08-31)
 
 - [#908](https://github.com/Sylius/Plus/issues/908) Fix version of Plus requirement for v1.0.0-ALPHA.1 in UPGRADE file ([@GSadee](https://github.com/GSadee))
