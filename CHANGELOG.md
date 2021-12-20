@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.0.0-ALPHA.4 (2021-12-20)
+
+- [#930](https://github.com/Sylius/Plus/issues/930) [Rbac] Replace usage of Zend\Stdlib\PriorityQueue with Laminas\Stdlib\PriorityQueue ([@GSadee](https://github.com/GSadee))
+- [#931](https://github.com/Sylius/Plus/issues/931) [Maintenance] Adjust services and configuration after dropping support of Sylius 1.9 ([@GSadee](https://github.com/GSadee))
+- [#932](https://github.com/Sylius/Plus/issues/932) [Behat] Remove deprecated whitespace from behat tags ([@GSadee](https://github.com/GSadee))
+- [#933](https://github.com/Sylius/Plus/issues/933) Support Symfony 5.4 ([@GSadee](https://github.com/GSadee))
+
 ## v1.0.0-ALPHA.3 (2021-10-08)
 
 - [#921](https://github.com/Sylius/Plus/issues/921) [Config] change dependency to use resource ([@SirDomin](https://github.com/SirDomin))
