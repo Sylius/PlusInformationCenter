@@ -1,3 +1,8 @@
+# UPGRADE FROM 1.0.0-ALPHA.3 to 1.0.0-ALPHA.4
+
+1. Controllers from `Inventory` and `Returns` namespaces have been refactored to explicitly get request parameters 
+from the appropriate bag.
+
 # UPGRADE FROM 1.0.0-ALPHA.2 to 1.0.0-ALPHA.3
 
 1. The return types of `Sylius\Plus\Loyalty\Domain\Model\LoyaltyPointsTransactionInterface` methods have been changed:
