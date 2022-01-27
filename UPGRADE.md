@@ -1,3 +1,15 @@
+# UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
+
+1. Since 1.0.0-ALPHA.5, the recommended Sylius version to use with Plus is `1.11.*`. If you would like to upgrade Sylius to v1.11.0, 
+please follow [Sylius's upgrade instructions](https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.11.md) and [Sylius API's upgrade instructions](https://github.com/Sylius/Sylius/blob/master/UPGRADE-API-1.11.md).
+
+2. If you still use Sylius `1.10.*`, you need to override some resources api configurations. 
+You can find them in `vendor/sylius/plus/etc/sylius-1.10/Resources/config/api_resources/`.
+
+3. Following services ids has been changed:
+    * `Sylius\Plus\CustomerPools\Application\CommandHandler\SendAccountRegistrationEmailHandler` => `Sylius\Plus\CustomerPools\Application\CommandHandler\Account\SendAccountRegistrationEmailHandler`
+    * `Sylius\Plus\CustomerPools\Application\CommandHandler\SendAccountVerificationEmailHandler` => `Sylius\Plus\CustomerPools\Application\CommandHandler\Account\SendAccountVerificationEmailHandler` 
+
 # UPGRADE FROM 1.0.0-ALPHA.3 to 1.0.0-ALPHA.4
 
 1. Controllers from `Inventory` and `Returns` namespaces have been refactored to explicitly get request parameters 
