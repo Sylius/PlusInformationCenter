@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v1.0.0-ALPHA.5 (2022-02-16)
+
+- [#936](https://github.com/Sylius/Plus/issues/936) Drop support for PHP 7.4 + Symfony 5.2 and 5.3 ([@GSadee](https://github.com/GSadee))
+- [#938](https://github.com/Sylius/Plus/issues/938) [Composer] Remove a conflict to payum/payum ^1.7 ([@GSadee](https://github.com/GSadee))
+- [#939](https://github.com/Sylius/Plus/issues/939) Support Sylius v1.11.0-ALPHA (@[@GSadee](https://github.com/GSadee))
+- [#941](https://github.com/Sylius/Plus/issues/941) Support Sylius v1.11.0-BETA.1 ([@GSadee](https://github.com/GSadee))
+- [#942](https://github.com/Sylius/Plus/issues/942) [Inventory] Improve InventorySourceStockType to extend AbstractResourceType ([@GSadee](https://github.com/GSadee))
+- [#943](https://github.com/Sylius/Plus/issues/943) [Fixtures] Add fixtures for catalog promotions ([@GSadee](https://github.com/GSadee))
+- [#944](https://github.com/Sylius/Plus/issues/944) [Maintenance] Support stable Sylius v1.11.0 ([@GSadee](https://github.com/GSadee))
+
 ## v1.0.0-ALPHA.4 (2021-12-20)
 
 - [#930](https://github.com/Sylius/Plus/issues/930) [Rbac] Replace usage of Zend\Stdlib\PriorityQueue with Laminas\Stdlib\PriorityQueue ([@GSadee](https://github.com/GSadee))

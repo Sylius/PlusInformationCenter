@@ -3,10 +3,18 @@
 1. Since 1.0.0-ALPHA.5, the recommended Sylius version to use with Plus is `1.11.*`. If you would like to upgrade Sylius to v1.11.0, 
 please follow [Sylius's upgrade instructions](https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.11.md) and [Sylius API's upgrade instructions](https://github.com/Sylius/Sylius/blob/master/UPGRADE-API-1.11.md).
 
-2. If you still use Sylius `1.10.*`, you need to override some resources api configurations. 
+1. If you still use Sylius `1.10.*`, you need to override some resources api configurations. 
 You can find them in `vendor/sylius/plus/etc/sylius-1.10/Resources/config/api_resources/`.
 
-3. Following services ids has been changed:
+    If you did not change anything in these configurations, use following command to override required files:
+
+    ```bash
+    cp -R vendor/sylius/plus/etc/sylius-1.10/Resources/config/api_resources/* config/api_platform/
+    rm vendor/sylius/plus/src/Resources/config/api_resources/Customer.xml
+    rm vendor/sylius/plus/src/Resources/config/api_resources/Order.xml
+    ```
+
+1. Following services ids have been changed:
     * `Sylius\Plus\CustomerPools\Application\CommandHandler\SendAccountRegistrationEmailHandler` => `Sylius\Plus\CustomerPools\Application\CommandHandler\Account\SendAccountRegistrationEmailHandler`
     * `Sylius\Plus\CustomerPools\Application\CommandHandler\SendAccountVerificationEmailHandler` => `Sylius\Plus\CustomerPools\Application\CommandHandler\Account\SendAccountVerificationEmailHandler` 
 
