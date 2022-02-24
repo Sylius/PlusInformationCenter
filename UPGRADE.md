@@ -1,3 +1,18 @@
+# UPGRADE FROM 1.0.0-ALPHA.5 to 1.0.0-ALPHA.6
+
+1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequestUnit` has been made a resource.
+Based on this change `getId()` method was added and `id()` method is now marked as `@deprecated`, as it will be removed in v1.0.0.
+1. The `Sylius\Plus\Returns\Application\Mapper\ReturnRequestUnitMapper` has been modified to use new `Sylius\Plus\Returns\Application\Factory\ReturnRequestUnitFactory`.
+Due to this changes new argument has been added to the constructor:
+
+    ```diff
+        public function __construct(
+            Private RepositoryInterface $orderItemUnitRepository,
+    +       Private ReturnRequestUnitFactoryInterface $returnRequestUnitFactory
+        ) {
+        }
+    ```
+   
 # UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
 
 1. Since 1.0.0-ALPHA.5, the recommended Sylius version to use with Plus is `1.11.*`. If you would like to upgrade Sylius to v1.11.0, 
