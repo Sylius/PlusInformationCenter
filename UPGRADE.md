@@ -2,6 +2,7 @@
 
 1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequestUnit` has been made a resource.
 Based on this change `getId()` method was added and `id()` method is now marked as `@deprecated`, as it will be removed in v1.0.0.
+
 1. The `Sylius\Plus\Returns\Application\Mapper\ReturnRequestUnitMapper` has been modified to use new `Sylius\Plus\Returns\Application\Factory\ReturnRequestUnitFactory`.
 Due to this changes new argument has been added to the constructor:
 
@@ -28,7 +29,15 @@ Due to this changes new argument has been added to the constructor:
    ```
 
 1. The `Sylius\Plus\Entity\AdminUserTrait` has been removed, use `Sylius\Plus\ChannelAdmin\Domain\Model\AdminChannelAwareTrait`, `Sylius\Plus\Rbac\Domain\Model\ToggleablePermissionCheckerTrait`, `Sylius\Plus\Rbac\Domain\Model\RoleableTrait` and `Sylius\Plus\Entity\LastLoginIpAwareTrait` instead
+
 1. The `Sylius\Plus\Entity\AdminUserInterface` has been removed, use `Sylius\Plus\Rbac\Domain\Model\AdminUserInterface`, `Sylius\Component\Channel\Model\ChannelAwareInterface` and `Sylius\Plus\Entity\LastLoginIpAwareInterface` instead
+
+1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelChecker` has been refactored to take in constructor
+   list of checkers tagged by `sylius_plus.channel_admin.resource_channel_checker` and use them to check the given resource
+   instead of doing it in its content.
+
+1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelEnabilibityChecker` has been refactored to take
+   in constructor `sylius_plus.channel_admin.restricted_resources` parameter instead of using hardcoded list of resources in its content.
 
 # UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
 
