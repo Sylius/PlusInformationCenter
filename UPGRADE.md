@@ -27,6 +27,9 @@ Due to this changes new argument has been added to the constructor:
         }
    ```
 
+1. The `Sylius\Plus\Entity\AdminUserTrait` has been removed, use `Sylius\Plus\ChannelAdmin\Domain\Model\AdminChannelAwareTrait`, `Sylius\Plus\Rbac\Domain\Model\ToggleablePermissionCheckerTrait`, `Sylius\Plus\Rbac\Domain\Model\RoleableTrait` and `Sylius\Plus\Entity\LastLoginIpAwareTrait` instead
+1. The `Sylius\Plus\Entity\AdminUserInterface` has been removed, use `Sylius\Plus\Rbac\Domain\Model\AdminUserInterface`, `Sylius\Component\Channel\Model\ChannelAwareInterface` and `Sylius\Plus\Entity\LastLoginIpAwareInterface` instead
+
 # UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
 
 1. Since 1.0.0-ALPHA.5, the recommended Sylius version to use with Plus is `1.11.*`. If you would like to upgrade Sylius to v1.11.0, 
