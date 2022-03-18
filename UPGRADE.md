@@ -12,7 +12,21 @@ Due to this changes new argument has been added to the constructor:
         ) {
         }
     ```
-   
+
+1. The `Sylius\Plus\Returns\Application\CommandHandler\RequestReturnHandler` logic and constructor has been changed due to refactor.
+
+    ```diff
+        public function __construct(
+            private ObjectManager $returnRequestManager,
+    -       private ReturnRequestConfirmationSender $returnRequestConfirmationSender, 
+            ...
+            private ImageUploaderInterface $uploader,
+    +       private MessageBusInterface $commandBus
+        ) {
+            ...
+        }
+   ```
+
 # UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
 
 1. Since 1.0.0-ALPHA.5, the recommended Sylius version to use with Plus is `1.11.*`. If you would like to upgrade Sylius to v1.11.0, 
