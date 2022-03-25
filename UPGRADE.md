@@ -43,6 +43,11 @@ Due to this changes new argument has been added to the constructor:
 1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelEnabilibityChecker` has been refactored to take
    in constructor `sylius_plus.channel_admin.restricted_resources` parameter instead of using hardcoded list of resources in its content.
 
+1. The shop template overriding method has been changed to use Sylius template events:
+   * The `src/Resources/templates/bundles/SyliusShopBundle/Account/Order/Show/_header.html.twig` has been removed and replaced by using `header` block in `sylius.shop.account.order.show.subcontent` template event. Remove that file from your `templates/bundles` directory or adjust it to your customizations.
+   * The `sylius_plus.block_event_listener.shop_account_order_show.return_requests` Sonata block has been removed and replaced by `return_requests` block in `sylius.shop.account.order.show.subcontent` template event.
+   * The `sylius_plus.block.block_event_listener.shop.javascripts` Sonata block has been removed and replaced by `javascripts` block in `sylius.shop.layout.javascripts` template event.
+
 # UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
 
 1. Since 1.0.0-ALPHA.5, the recommended Sylius version to use with Plus is `1.11.*`. If you would like to upgrade Sylius to v1.11.0, 
