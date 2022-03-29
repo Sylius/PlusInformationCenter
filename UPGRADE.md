@@ -1,10 +1,25 @@
 # UPGRADE FROM 1.0.0-ALPHA.5 to 1.0.0-ALPHA.6
 
+1. The `src/Resources/views/Loyalty/Shop/_loyaltyPurchases.html.twig` template has been renamed to `src/Resources/views/Loyalty/Shop/_loyalty.html.twig`.
+Due to this change, the `sylius_plus_shop_loyalty_purchase_index` route configuration has been modified: 
+
+    ```diff
+         sylius_plus_shop_loyalty_purchase_index:
+             path: /account/loyalty
+             methods: [GET]
+             defaults:
+                 _controller: sylius_plus.controller.loyalty_purchase:indexAction
+                 _sylius:
+    -                template: '@SyliusPlusPlugin/Loyalty/Shop/_loyaltyPurchases.html.twig'
+    +                template: '@SyliusPlusPlugin/Loyalty/Shop/_loyalty.html.twig'
+                     grid: sylius_plus_shop_loyalty_purchase
+    ```
+
 1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequestUnit` has been made a resource.
-Based on this change `getId()` method was added and `id()` method is now marked as `@deprecated`, as it will be removed in v1.0.0.
+Based on this change, `getId()` method was added and `id()` method is now marked as `@deprecated` as it will be removed in v1.0.0.
 
 1. The `Sylius\Plus\Returns\Application\Mapper\ReturnRequestUnitMapper` has been modified to use new `Sylius\Plus\Returns\Application\Factory\ReturnRequestUnitFactory`.
-Due to this changes new argument has been added to the constructor:
+Due to this change, a new argument has been added to the constructor:
 
     ```diff
         public function __construct(
