@@ -61,9 +61,22 @@ Due to this change, a new argument has been added to the constructor:
    in constructor `sylius_plus.channel_admin.restricted_resources` parameter instead of using hardcoded list of resources in its content.
 
 1. The shop template overriding method has been changed to use Sylius template events:
-   * The `src/Resources/templates/bundles/SyliusShopBundle/Account/Order/Show/_header.html.twig` along with `SyliusShopBundle/Account/Order/Show/` directories have been removed and replaced by using `header` block in `sylius.shop.account.order.show.subcontent` template event. Remove that file and directories from your `templates/bundles` directory or adjust it to your customizations.
-   * The `sylius_plus.block_event_listener.shop_account_order_show.return_requests` Sonata block has been removed and replaced by `return_requests` block in `sylius.shop.account.order.show.subcontent` template event.
-   * The `sylius_plus.block.block_event_listener.shop.javascripts` Sonata block has been removed and replaced by `javascripts` block in `sylius.shop.layout.javascripts` template event.
+    * The `src/Resources/templates/bundles/SyliusShopBundle/Account/Order/Show/_header.html.twig` along with `SyliusShopBundle/Account/Order/Show/` directories have been removed and replaced by using `header` block in `sylius.shop.account.order.show.subcontent` template event. Remove that file and directories from your `templates/bundles` directory or adjust it to your customizations.
+    * The `sylius_plus.block_event_listener.shop_account_order_show.return_requests` Sonata block has been removed and replaced by `return_requests` block in `sylius.shop.account.order.show.subcontent` template event.
+    * The `sylius_plus.block.block_event_listener.shop.javascripts` Sonata block has been removed and replaced by `javascripts` block in `sylius.shop.layout.javascripts` template event.
+
+1. The repositories that overwrite the repositories from Sylius have been refactored:
+    * The `Sylius\Plus\Doctrine\ORM\CountCustomersQuery` and `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\CustomerListQueryBuilder`
+      have been extracted from the `Sylius\Plus\Doctrine\ORM\CustomerRepository`.
+    * The `Sylius\Plus\Doctrine\ORM\CreditMemoRepository` has been removed and replaced by `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\CreditMemoListQueryBuilder`.
+    * The `Sylius\Plus\Doctrine\ORM\InvoiceRepository` has been removed and replaced by `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\InvoiceListQueryBuilder`.
+    * The `Sylius\Plus\Doctrine\ORM\OrderItemUnitRepository` has been removed and replaced by `Sylius\Plus\Returns\Infrastructure\Doctrine\ORM\CountOrderItemUnitsQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ProductRepository` has been removed and replaced by `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQuery` 
+      and `Sylius\Plus\Inventory\Infrastructure\Doctrine\ORM\FindAllDescendantProductsByTaxonQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ProductVariantRepository` has been removed and replaced by `Sylius\Plus\Doctrine\ORM\FindProductVariantsByNameInChannelQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ShopUserRepository` has been removed and replaced by `Sylius\Plus\CustomerPools\Infrastructure\Doctrine\ORM\FindShopUserByUsernameAndCustomerPoolQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ShopUserRepository::findOneByEmailAndCustomerPool` method has been removed, 
+      use `Sylius\Plus\CustomerPools\Infrastructure\Doctrine\ORM\FindShopUserByUsernameAndCustomerPoolQuery` instead.
 
 # UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
 
