@@ -36,6 +36,8 @@ Due to this changes new argument has been added to the constructor:
 
 1. The `Sylius\Plus\Entity\ProductVariantInterface` has been removed, use `Sylius\Component\Core\Model\ProductVariantInterface` and `Sylius\Plus\Inventory\Domain\Model\ProductVariantInterface` instead
 
+1. The `Sylius\Plus\Entity\AdjustmentInterface` has been removed, use `Sylius\Component\Core\Model\AdjustmentInterface`, `Sylius\Plus\Loyalty\Domain\Model\AdjustmentType` and `Sylius\Plus\Returns\Domain\Model\AdjustmentType` instead
+
 1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelChecker` has been refactored to take in constructor
    list of checkers tagged by `sylius_plus.channel_admin.resource_channel_checker` and use them to check the given resource
    instead of doing it in its content.
