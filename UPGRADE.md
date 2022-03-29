@@ -53,6 +53,10 @@ Due to this change, a new argument has been added to the constructor:
 
 1. The `Sylius\Plus\Entity\AdjustmentInterface` has been removed, use `Sylius\Component\Core\Model\AdjustmentInterface`, `Sylius\Plus\Loyalty\Domain\Model\AdjustmentType` and `Sylius\Plus\Returns\Domain\Model\AdjustmentType` instead
 
+1. The `Sylius\Plus\Entity\CustomerTrait` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerPoolAwareTrait` and `Sylius\Plus\Loyalty\Domain\Model\LoyaltyAwareTrait` instead
+
+1. The `Sylius\Plus\Entity\CustomerInterface` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerInterface` and `Sylius\Plus\Loyalty\Domain\Model\CustomerInterface` instead
+
 1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelChecker` has been refactored to take in constructor
    list of checkers tagged by `sylius_plus.channel_admin.resource_channel_checker` and use them to check the given resource
    instead of doing it in its content.
