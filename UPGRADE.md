@@ -47,6 +47,7 @@ Due to this change, a new argument has been added to the constructor:
 
 1. The `Sylius\Plus\Entity\AdminUserInterface` has been removed, use `Sylius\Plus\Rbac\Domain\Model\AdminUserInterface`, `Sylius\Component\Channel\Model\ChannelAwareInterface` and `Sylius\Plus\Entity\LastLoginIpAwareInterface` instead
 
+<<<<<<< HEAD
 1. The `Sylius\Plus\Entity\ProductVariantTrait` has been removed, use `Sylius\Plus\Inventory\Domain\Model\InventorySourceStocksAwareTrait` instead
 
 1. The `Sylius\Plus\Entity\ProductVariantInterface` has been removed, use `Sylius\Component\Core\Model\ProductVariantInterface` and `Sylius\Plus\Inventory\Domain\Model\ProductVariantInterface` instead
@@ -60,6 +61,10 @@ Due to this change, a new argument has been added to the constructor:
 1. The `Sylius\Plus\Entity\ShipmentTrait` has been removed, use `Sylius\Plus\Inventory\Domain\Model\InventorySourceAwareTrait` instead
 
 1. The `Sylius\Plus\Entity\ShipmentInterface` has been removed, use `Sylius\Component\Core\Model\ShipmentInterface` and `Sylius\Plus\Inventory\Domain\Model\ShipmentInterface` instead
+
+1. The `Sylius\Plus\Entity\ChannelTrait` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerPoolAwareTrait`, `Sylius\Plus\Returns\Domain\Model\ReturnRequestsAllowedAwareTrait` and `Sylius\Plus\BusinessUnits\Domain\Model\BusinessUnitAwareTrait` instead
+
+1. The `Sylius\Plus\Entity\ChannelInterface` has been removed, use `Sylius\Component\Core\Model\ChannelInterface`, `Sylius\Plus\BusinessUnits\Domain\Model\ChannelInterface`, `Sylius\Plus\Returns\Domain\Model\ChannelInterface` and `Sylius\Plus\CustomerPools\Domain\Model\ChannelInterface` instead
 
 1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelChecker` has been refactored to take in constructor
    list of checkers tagged by `sylius_plus.channel_admin.resource_channel_checker` and use them to check the given resource
