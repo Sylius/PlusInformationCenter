@@ -16,10 +16,10 @@
    After:
 
     ```yaml
-       sylius_plus:
-           resources:
-               sample_resource:
-                   ...
+        sylius_plus:
+            resources:
+                sample_resource:
+                    ...
     ```
 
 1. The repositories that overwrite the repositories from Sylius have been refactored:
