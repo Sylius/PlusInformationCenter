@@ -1,25 +1,48 @@
 # UPGRADE FROM 1.0.0-ALPHA.5 to 1.0.0-ALPHA.6
 
-1. The `src/Resources/views/Loyalty/Shop/_loyaltyPurchases.html.twig` template has been renamed to `src/Resources/views/Loyalty/Shop/_loyalty.html.twig`.
-Due to this change, the `sylius_plus_shop_loyalty_purchase_index` route configuration has been modified: 
+## General update
 
-    ```diff
-         sylius_plus_shop_loyalty_purchase_index:
-             path: /account/loyalty
-             methods: [GET]
-             defaults:
-                 _controller: sylius_plus.controller.loyalty_purchase:indexAction
-                 _sylius:
-    -                template: '@SyliusPlusPlugin/Loyalty/Shop/_loyaltyPurchases.html.twig'
-    +                template: '@SyliusPlusPlugin/Loyalty/Shop/_loyalty.html.twig'
-                     grid: sylius_plus_shop_loyalty_purchase
-    ```
+1. The repositories that overwrite the repositories from Sylius have been refactored:
+    * The `Sylius\Plus\Doctrine\ORM\CountCustomersQuery` and `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\CustomerListQueryBuilder`
+      have been extracted from the `Sylius\Plus\Doctrine\ORM\CustomerRepository`.
+    * The `Sylius\Plus\Doctrine\ORM\CreditMemoRepository` has been removed and replaced by `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\CreditMemoListQueryBuilder`.
+    * The `Sylius\Plus\Doctrine\ORM\InvoiceRepository` has been removed and replaced by `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\InvoiceListQueryBuilder`.
+    * The `Sylius\Plus\Doctrine\ORM\OrderItemUnitRepository` has been removed and replaced by `Sylius\Plus\Returns\Infrastructure\Doctrine\ORM\CountOrderItemUnitsQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ProductRepository` has been removed and replaced by `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQuery`
+      and `Sylius\Plus\Inventory\Infrastructure\Doctrine\ORM\FindAllDescendantProductsByTaxonQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ProductVariantRepository` has been removed and replaced by `Sylius\Plus\Doctrine\ORM\FindProductVariantsByNameInChannelQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ShopUserRepository` has been removed and replaced by `Sylius\Plus\CustomerPools\Infrastructure\Doctrine\ORM\FindShopUserByUsernameAndCustomerPoolQuery`.
+    * The `Sylius\Plus\Doctrine\ORM\ShopUserRepository::findOneByEmailAndCustomerPool` method has been removed,
+      use `Sylius\Plus\CustomerPools\Infrastructure\Doctrine\ORM\FindShopUserByUsernameAndCustomerPoolQuery` instead.
+
+1. The entity traits and interfaces have been refactored to split them between different contexts:
+    * The `Sylius\Plus\Entity\AdminUserTrait` has been removed, use `Sylius\Plus\ChannelAdmin\Domain\Model\AdminChannelAwareTrait`,
+      `Sylius\Plus\Rbac\Domain\Model\ToggleablePermissionCheckerTrait`, `Sylius\Plus\Rbac\Domain\Model\RoleableTrait` and `Sylius\Plus\Entity\LastLoginIpAwareTrait` instead.
+    * The `Sylius\Plus\Entity\AdminUserInterface` has been removed, use `Sylius\Plus\Rbac\Domain\Model\AdminUserInterface`,
+      `Sylius\Component\Channel\Model\ChannelAwareInterface` and `Sylius\Plus\Entity\LastLoginIpAwareInterface` instead.
+    * The `Sylius\Plus\Entity\ProductVariantTrait` has been removed, use `Sylius\Plus\Inventory\Domain\Model\InventorySourceStocksAwareTrait` instead.
+    * The `Sylius\Plus\Entity\ProductVariantInterface` has been removed, use `Sylius\Plus\Inventory\Domain\Model\ProductVariantInterface` instead.
+    * The `Sylius\Plus\Entity\AdjustmentInterface` has been removed, use `Sylius\Component\Core\Model\AdjustmentInterface`,
+      `Sylius\Plus\Loyalty\Domain\Model\AdjustmentType` and `Sylius\Plus\Returns\Domain\Model\AdjustmentType` instead.
+    * The `Sylius\Plus\Entity\CustomerTrait` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerPoolAwareTrait`
+      and `Sylius\Plus\Loyalty\Domain\Model\LoyaltyAwareTrait` instead.
+    * The `Sylius\Plus\Entity\CustomerInterface` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerInterface`
+      and `Sylius\Plus\Loyalty\Domain\Model\CustomerInterface` instead.
+    * The `Sylius\Plus\Entity\ShipmentTrait` has been removed, use `Sylius\Plus\Inventory\Domain\Model\InventorySourceAwareTrait` instead.
+    * The `Sylius\Plus\Entity\ShipmentInterface` has been removed, use `Sylius\Plus\Inventory\Domain\Model\ShipmentInterface` instead.
+    * The `Sylius\Plus\Entity\ChannelTrait` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerPoolAwareTrait`,
+      `Sylius\Plus\Returns\Domain\Model\ReturnRequestsAllowedAwareTrait` and `Sylius\Plus\BusinessUnits\Domain\Model\BusinessUnitAwareTrait` instead.
+    * The `Sylius\Plus\Entity\ChannelInterface` has been removed, use `Sylius\Plus\BusinessUnits\Domain\Model\ChannelInterface`,
+      `Sylius\Plus\Returns\Domain\Model\ChannelInterface` and `Sylius\Plus\CustomerPools\Domain\Model\ChannelInterface` instead.
+    * The `Sylius\Plus\Entity\OrderTrait` has been removed, use `Sylius\Plus\Returns\Domain\Model\ReturnRequestAwareTrait`
+      and `Sylius\Plus\Loyalty\Application\Provider\OrdersLoyaltyPointsProvider` instead.
+    * The `Sylius\Plus\Entity\OrderInterface` has been removed, use `Sylius\Plus\Returns\Domain\Model\OrderInterface` instead.
 
 1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequestUnit` has been made a resource.
-Based on this change, `getId()` method was added and `id()` method is now marked as `@deprecated` as it will be removed in v1.0.0.
+   Based on this change, `getId()` method was added and `id()` method is now marked as `@deprecated` as it will be removed in v1.0.0.
 
 1. The `Sylius\Plus\Returns\Application\Mapper\ReturnRequestUnitMapper` has been modified to use new `Sylius\Plus\Returns\Application\Factory\ReturnRequestUnitFactory`.
-Due to this change, a new argument has been added to the constructor:
+   Due to this change, a new argument has been added to the constructor:
 
     ```diff
         public function __construct(
@@ -43,34 +66,6 @@ Due to this change, a new argument has been added to the constructor:
         }
    ```
 
-1. The `Sylius\Plus\Entity\AdminUserTrait` has been removed, use `Sylius\Plus\ChannelAdmin\Domain\Model\AdminChannelAwareTrait`, `Sylius\Plus\Rbac\Domain\Model\ToggleablePermissionCheckerTrait`, `Sylius\Plus\Rbac\Domain\Model\RoleableTrait` and `Sylius\Plus\Entity\LastLoginIpAwareTrait` instead
-
-1. The `Sylius\Plus\Entity\AdminUserInterface` has been removed, use `Sylius\Plus\Rbac\Domain\Model\AdminUserInterface`, `Sylius\Component\Channel\Model\ChannelAwareInterface` and `Sylius\Plus\Entity\LastLoginIpAwareInterface` instead
-
-1. The `Sylius\Plus\Entity\ProductVariantTrait` has been removed, use `Sylius\Plus\Inventory\Domain\Model\InventorySourceStocksAwareTrait` instead
-
-1. The `Sylius\Plus\Entity\ProductVariantInterface` has been removed, use `Sylius\Component\Core\Model\ProductVariantInterface` and `Sylius\Plus\Inventory\Domain\Model\ProductVariantInterface` instead
-
-1. The `Sylius\Plus\Entity\AdjustmentInterface` has been removed, use `Sylius\Component\Core\Model\AdjustmentInterface`, `Sylius\Plus\Loyalty\Domain\Model\AdjustmentType` and `Sylius\Plus\Returns\Domain\Model\AdjustmentType` instead
-
-1. The `Sylius\Plus\Entity\CustomerTrait` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerPoolAwareTrait` and `Sylius\Plus\Loyalty\Domain\Model\LoyaltyAwareTrait` instead
-
-1. The `Sylius\Plus\Entity\CustomerInterface` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerInterface` and `Sylius\Plus\Loyalty\Domain\Model\CustomerInterface` instead
-
-1. The `Sylius\Plus\Entity\ShipmentTrait` has been removed, use `Sylius\Plus\Inventory\Domain\Model\InventorySourceAwareTrait` instead
-
-1. The `Sylius\Plus\Entity\ShipmentInterface` has been removed, use `Sylius\Component\Core\Model\ShipmentInterface` and `Sylius\Plus\Inventory\Domain\Model\ShipmentInterface` instead
-
-1. The `Sylius\Plus\Entity\ChannelTrait` has been removed, use `Sylius\Plus\CustomerPools\Domain\Model\CustomerPoolAwareTrait`, `Sylius\Plus\Returns\Domain\Model\ReturnRequestsAllowedAwareTrait` and `Sylius\Plus\BusinessUnits\Domain\Model\BusinessUnitAwareTrait` instead
-
-1. The `Sylius\Plus\Entity\ChannelInterface` has been removed, use `Sylius\Component\Core\Model\ChannelInterface`, `Sylius\Plus\BusinessUnits\Domain\Model\ChannelInterface`, `Sylius\Plus\Returns\Domain\Model\ChannelInterface` and `Sylius\Plus\CustomerPools\Domain\Model\ChannelInterface` instead
-
-1. The `Sylius\Plus\Entity\OrderTrait` has been removed, use `Sylius\Plus\Returns\Domain\Model\ReturnRequestAwareTrait` and `Sylius\Plus\Loyalty\Application\Provider\OrdersLoyaltyPointsProvider` instead
-
-1. The `Sylius\Plus\Entity\OrderInterface` has been removed, use `Sylius\Component\Core\Model\OrderInterface` and `Sylius\Plus\Returns\Domain\Model\OrderInterface` instead
-
-1. The `Sylius\Plus\Entity\OrderInterface` has been removed, use `Sylius\Component\Core\Model\OrderInterface` and `Sylius\Plus\Returns\Domain\Model\OrderInterface` instead
-
 1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelChecker` has been refactored to take in constructor
    list of checkers tagged by `sylius_plus.channel_admin.resource_channel_checker` and use them to check the given resource
    instead of doing it in its content.
@@ -78,26 +73,30 @@ Due to this change, a new argument has been added to the constructor:
 1. The `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelEnabilibityChecker` has been refactored to take
    in constructor `sylius_plus.channel_admin.restricted_resources` parameter instead of using hardcoded list of resources in its content.
 
+1. The `OrdersLoyaltyPointsProviderInterface $loyaltyPointsProvider` has been added as the 2nd argument
+   in the constructor of `Sylius\Plus\Loyalty\Application\Assigner\LoyaltyPointsAssigner`
+
+## Templates
+
 1. The shop template overriding method has been changed to use Sylius template events:
     * The `src/Resources/templates/bundles/SyliusShopBundle/Account/Order/Show/_header.html.twig` along with `SyliusShopBundle/Account/Order/Show/` directories have been removed and replaced by using `header` block in `sylius.shop.account.order.show.subcontent` template event. Remove that file and directories from your `templates/bundles` directory or adjust it to your customizations.
     * The `sylius_plus.block_event_listener.shop_account_order_show.return_requests` Sonata block has been removed and replaced by `return_requests` block in `sylius.shop.account.order.show.subcontent` template event.
     * The `sylius_plus.block.block_event_listener.shop.javascripts` Sonata block has been removed and replaced by `javascripts` block in `sylius.shop.layout.javascripts` template event.
 
-1. The repositories that overwrite the repositories from Sylius have been refactored:
-    * The `Sylius\Plus\Doctrine\ORM\CountCustomersQuery` and `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\CustomerListQueryBuilder`
-      have been extracted from the `Sylius\Plus\Doctrine\ORM\CustomerRepository`.
-    * The `Sylius\Plus\Doctrine\ORM\CreditMemoRepository` has been removed and replaced by `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\CreditMemoListQueryBuilder`.
-    * The `Sylius\Plus\Doctrine\ORM\InvoiceRepository` has been removed and replaced by `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\InvoiceListQueryBuilder`.
-    * The `Sylius\Plus\Doctrine\ORM\OrderItemUnitRepository` has been removed and replaced by `Sylius\Plus\Returns\Infrastructure\Doctrine\ORM\CountOrderItemUnitsQuery`.
-    * The `Sylius\Plus\Doctrine\ORM\ProductRepository` has been removed and replaced by `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQuery` 
-      and `Sylius\Plus\Inventory\Infrastructure\Doctrine\ORM\FindAllDescendantProductsByTaxonQuery`.
-    * The `Sylius\Plus\Doctrine\ORM\ProductVariantRepository` has been removed and replaced by `Sylius\Plus\Doctrine\ORM\FindProductVariantsByNameInChannelQuery`.
-    * The `Sylius\Plus\Doctrine\ORM\ShopUserRepository` has been removed and replaced by `Sylius\Plus\CustomerPools\Infrastructure\Doctrine\ORM\FindShopUserByUsernameAndCustomerPoolQuery`.
-    * The `Sylius\Plus\Doctrine\ORM\ShopUserRepository::findOneByEmailAndCustomerPool` method has been removed, 
-      use `Sylius\Plus\CustomerPools\Infrastructure\Doctrine\ORM\FindShopUserByUsernameAndCustomerPoolQuery` instead.
+1. The `src/Resources/views/Loyalty/Shop/_loyaltyPurchases.html.twig` template has been renamed to `src/Resources/views/Loyalty/Shop/_loyalty.html.twig`.
+   Due to this change, the `sylius_plus_shop_loyalty_purchase_index` route configuration has been modified:
 
-1. The `OrdersLoyaltyPointsProviderInterface $loyaltyPointsProvider` has been added as the 2nd argument
-   in the constructor of `Sylius\Plus\Loyalty\Application\Assigner\LoyaltyPointsAssigner`
+    ```diff
+         sylius_plus_shop_loyalty_purchase_index:
+             path: /account/loyalty
+             methods: [GET]
+             defaults:
+                 _controller: sylius_plus.controller.loyalty_purchase:indexAction
+                 _sylius:
+    -                template: '@SyliusPlusPlugin/Loyalty/Shop/_loyaltyPurchases.html.twig'
+    +                template: '@SyliusPlusPlugin/Loyalty/Shop/_loyalty.html.twig'
+                     grid: sylius_plus_shop_loyalty_purchase
+    ```
 
 # UPGRADE FROM 1.0.0-ALPHA.4 to 1.0.0-ALPHA.5
 
