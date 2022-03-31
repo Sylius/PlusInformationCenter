@@ -2,6 +2,26 @@
 
 ## General update
 
+1. The way of customizing resource definition has been changed.
+
+   Before:
+
+    ```yaml
+        sylius_resource:
+            resources:
+                sylius_plus.sample_resource:
+                    ...
+    ```  
+
+   After:
+
+    ```yaml
+       sylius_plus:
+           resources:
+               sample_resource:
+                   ...
+    ```
+
 1. The repositories that overwrite the repositories from Sylius have been refactored:
     * The `Sylius\Plus\Doctrine\ORM\CountCustomersQuery` and `Sylius\Plus\ChannelAdmin\Infrastructure\Doctrine\ORM\CustomerListQueryBuilder`
       have been extracted from the `Sylius\Plus\Doctrine\ORM\CustomerRepository`.
