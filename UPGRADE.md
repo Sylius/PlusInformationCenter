@@ -2,12 +2,14 @@
 
 ## General update
 
-1. The admin template overriding method has been changed to use Sylius template events. You need to remove it by your side and if you already override some of these templates you can refactor it to use events or keep overriding it this way.
+1. The admin template overriding method has been changed to use Sylius template events. You need to remove it by your side 
+   and if you already override some of these templates you can refactor it to use events or keep overriding it this way.
     * `src/Resources/templates/bundles/SyliusAdminBundle/*` has been removed and replaced using events. Deleted templates:
-        * `src/Resources/templates/bundles/SyliusAdminBundle/Admin/_form.html.twig`
+        * `src/Resources/templates/bundles/SyliusAdminBundle/AdminUser/_form.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Channel/_form.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Customer/_form.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Dashboard/_channelSwitch.html.twig`
+        * `src/Resources/templates/bundles/SyliusAdminBundle/Layout/_logo.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Order/Show/_header.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Order/Show/_payment.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Order/Show/_shipment.html.twig`
@@ -18,6 +20,9 @@
         * `src/Resources/templates/bundles/SyliusAdminBundle/Product/Show/_variantItem.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Product/Show/_variants.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Product/Tab/_inventory.html.twig`
+        * `src/Resources/templates/bundles/SyliusAdminBundle/ProductVariant/Tab/_inventory.html.twig`
+        * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/Grid/Action/shipWithTrackingCode.html.twig`
+        * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/Partial/_ship.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Security/_content.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/Show/_breadcrumb.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/_show.html.twig`
