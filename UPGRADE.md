@@ -32,6 +32,9 @@
    * `Sylius\Plus\Controller\OrderItemController` to `Sylius\Plus\Inventory\Application\Controller\OrderItemController`
    * `Sylius\Plus\EventListener\ChannelCreateListener` to `Sylius\Plus\Inventory\Application\EventListener\ChannelCreateListener`
 
+1. `Sylius\Plus\Returns\Application\CommandHandler\RequestReturnHandler` now uses factory to create ReturnRequest instead of 'new' statement.
+    And this service has extra argument on constructor (`Sylius\Plus\Returns\Application\Factory\ReturnRequestFactoryInterface`).
+
 # UPGRADE FROM 1.0.0-ALPHA.5 to 1.0.0-ALPHA.6
 
 ## General update
