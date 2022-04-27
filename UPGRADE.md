@@ -26,8 +26,11 @@
         * `src/Resources/templates/bundles/SyliusAdminBundle/Security/_content.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/Show/_breadcrumb.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/_show.html.twig`
-
-1. the class `Sylius\Plus\Calculator\ShippingCalculator\DelegatingCalculator` has been moved to new namespace `Sylius\Plus\Returns\Application\Calculator\ShippingCalculator`.
+        
+1. Classes has been moved to new namespaces:
+   * `Sylius\Plus\Calculator\ShippingCalculator\DelegatingCalculator` to `Sylius\Plus\Returns\Application\Calculator\ShippingCalculator\DelegatingCalculator`
+   * `Sylius\Plus\Controller\OrderItemController` to `Sylius\Plus\Inventory\Application\Controller\OrderItemController`
+   * `Sylius\Plus\EventListener\ChannelCreateListener` to `Sylius\Plus\Inventory\Application\EventListener\ChannelCreateListener`
 
 # UPGRADE FROM 1.0.0-ALPHA.5 to 1.0.0-ALPHA.6
 
