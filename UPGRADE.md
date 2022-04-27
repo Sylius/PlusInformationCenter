@@ -27,6 +27,8 @@
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/Show/_breadcrumb.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/_show.html.twig`
 
+1. the class `Sylius\Plus\Calculator\ShippingCalculator\DelegatingCalculator` has been moved to new namespace `Sylius\Plus\Returns\Application\Calculator\ShippingCalculator`.
+
 # UPGRADE FROM 1.0.0-ALPHA.5 to 1.0.0-ALPHA.6
 
 ## General update
