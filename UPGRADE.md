@@ -2,6 +2,14 @@
 
 ## General update
 
+1. Disabling the PDF Generator by set up the following configuration prevents generating a Gross Merchandise Value Report 
+
+```yaml
+sylius_plus:
+    pdf_generator:
+        enabled: false
+```        
+ 
 1. The admin template overriding method has been changed to use Sylius template events. You need to remove it by your side 
    and if you already override some of these templates you can refactor it to use events or keep overriding it this way.
     * `src/Resources/templates/bundles/SyliusAdminBundle/*` has been removed and replaced using events. Deleted templates:
