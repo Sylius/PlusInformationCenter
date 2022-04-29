@@ -2,7 +2,8 @@
 
 ## General update
 
-1. Disabling the PDF Generator by set up the following configuration prevents generating a Gross Merchandise Value Report 
+1. It was introduced the way to disable PDF generation. Please note that using the configuration below
+   will not allow you to generate the Gross Merchandise Value Report and Return Request PDFs.
 
 ```yaml
 sylius_plus:
