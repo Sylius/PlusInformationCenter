@@ -40,6 +40,7 @@ sylius_plus:
    * `Sylius\Plus\Calculator\ShippingCalculator\DelegatingCalculator` to `Sylius\Plus\Returns\Application\Calculator\ShippingCalculator\DelegatingCalculator`
    * `Sylius\Plus\Controller\OrderItemController` to `Sylius\Plus\Inventory\Application\Controller\OrderItemController`
    * `Sylius\Plus\EventListener\ChannelCreateListener` to `Sylius\Plus\Inventory\Application\EventListener\ChannelCreateListener`
+   * `Sylius\Plus\EventListener\ReviewCreateListener` to `Sylius\Plus\CustomerPools\Application\EventListener\ReviewCreateListener`
 
 1. `Sylius\Plus\Returns\Application\CommandHandler\RequestReturnHandler` now uses factory to create ReturnRequest instead of 'new' statement.
     And this service has extra argument on constructor (`Sylius\Plus\Returns\Application\Factory\ReturnRequestFactoryInterface`).
