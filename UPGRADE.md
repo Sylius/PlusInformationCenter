@@ -36,7 +36,7 @@ sylius_plus:
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/Show/_breadcrumb.html.twig`
         * `src/Resources/templates/bundles/SyliusAdminBundle/Shipment/_show.html.twig`
         
-1. Classes has been moved to new namespaces:
+1. Classes have been moved to new namespaces:
    * `Sylius\Plus\Calculator\ShippingCalculator\DelegatingCalculator` to `Sylius\Plus\Returns\Application\Calculator\ShippingCalculator\DelegatingCalculator`
    * `Sylius\Plus\Controller\OrderItemController` to `Sylius\Plus\Inventory\Application\Controller\OrderItemController`
    * `Sylius\Plus\EventListener\ChannelCreateListener` to `Sylius\Plus\Inventory\Application\EventListener\ChannelCreateListener`
@@ -44,6 +44,9 @@ sylius_plus:
 
 1. `Sylius\Plus\Returns\Application\CommandHandler\RequestReturnHandler` now uses factory to create ReturnRequest instead of 'new' statement.
     And this service has extra argument on constructor (`Sylius\Plus\Returns\Application\Factory\ReturnRequestFactoryInterface`).
+
+1. `Sylius\Plus\EventListener\AuthenticationSuccessListener` service has been removed. Use `sylius.listener.api_authentication_success_listener` 
+    from Sylius instead.
 
 # UPGRADE FROM 1.0.0-ALPHA.5 to 1.0.0-ALPHA.6
 
