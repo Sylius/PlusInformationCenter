@@ -1,3 +1,7 @@
+# UPGRADE FROM 1.0.0-ALPHA.7 to 1.0.0-ALPHA.8
+
+1. Doctrine string functions were removed from entity manager, due to collisions with Postgres.
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
