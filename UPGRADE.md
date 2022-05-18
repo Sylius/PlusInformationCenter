@@ -3,8 +3,8 @@
 1. Doctrine string functions were removed from entity manager, due to collisions with Postgres.
 
 1. Classes have been moved to new namespaces:
-    * `Sylius\Plus\Reviews\Infrastructure\Validator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator`
-    * `Sylius\Plus\Reviews\Infrastructure\Validator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator`
+    * `Sylius\Plus\Reviews\Infrastructure\Validator\UniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\UniqueReviewerEmailValidator`
+    * `Sylius\Plus\Reviews\Infrastructure\Validator\ApiUniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\ApiUniqueReviewerEmailValidator`
 
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
