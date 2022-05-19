@@ -6,6 +6,8 @@
     * `Sylius\Plus\Reviews\Infrastructure\Validator\UniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\UniqueReviewerEmailValidator`
     * `Sylius\Plus\Reviews\Infrastructure\Validator\ApiUniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\ApiUniqueReviewerEmailValidator`
     * `Sylius\Plus\Returns\Infrastructure\Listener\CreditMemoWithReturnRequestEventListener` to `Sylius\Plus\Listener\CreditMemoWithReturnRequestEventListener`
+    * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperatorInterface` to `Sylius\Plus\Returns\Application\Operator\ReturnInventoryOperatorInterface`
+    * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperator` to `Sylius\Plus\Operator\ReturnInventoryOperator`
 
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
