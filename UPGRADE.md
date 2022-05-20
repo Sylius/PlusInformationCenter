@@ -9,26 +9,10 @@
     * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperatorInterface` to `Sylius\Plus\Returns\Application\Operator\ReturnInventoryOperatorInterface`
     * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperator` to `Sylius\Plus\Operator\ReturnInventoryOperator`
 
-1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` class have been changed:
-    * `public function creditMemos(): Collection` method has been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
-    * `public function addCreditMemo(CreditMemoInterface $creditMemo): void` method has been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
-    * The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` constructor has been changed due to refactor above:
-    
-    ```diff
-        public function __construct(
-            protected ?string $response = null;
-    -       protected Collection $creditMemos, 
-            ...
-            protected Collection $images
-        ) {
-            ...
-    -       $this->creditMemos = new ArrayCollection();
-            ...
-        }
-    ```
-    * If you want to achieve behavior from before the decoupling you need to modify your `Sylius\Plus\Returns\Domain\Model\ReturnRequest` entity
-      by adding required trait:
-   
+1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` class has been changed:
+    * `public function creditMemos(): Collection` and `public function addCreditMemo(CreditMemoInterface $creditMemo): void` methods have been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
+    * To achieve the previous behaviour, you need to add mentioned trait and a proper interface to `ReturnRequest` entity:
+
 ```php
 <?php
 
@@ -54,7 +38,7 @@ class ReturnRequest extends BaseReturnRequest implements CreditMemosAwareInterfa
     use CreditMemosAwareTrait {
         __construct as private initializeCreditMemoAwareTrait;
     }
-
+    
     public function __construct(
         string $id,
         string $number,
@@ -68,10 +52,20 @@ class ReturnRequest extends BaseReturnRequest implements CreditMemosAwareInterfa
     )
     {
         parent::__construct($id, $number, $order, $resolution, $reason, $submittedAt, $returnedUnits, $currencyCode, $images);
-
+        
         $this->initializeCreditMemoAwareTrait();
     }
 }   
+```
+
+   * And register it:
+
+```yaml
+sylius_plus:
+    resources:
+        return_request:
+            classes:
+                model: App\Entity\ReturnRequest
 ```
 
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
