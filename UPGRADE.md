@@ -9,6 +9,71 @@
     * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperatorInterface` to `Sylius\Plus\Returns\Application\Operator\ReturnInventoryOperatorInterface`
     * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperator` to `Sylius\Plus\Operator\ReturnInventoryOperator`
 
+1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` class have been changed:
+    * `public function creditMemos(): Collection` method has been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
+    * `public function addCreditMemo(CreditMemoInterface $creditMemo): void` method has been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
+    * The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` constructor has been changed due to refactor above:
+    
+    ```diff
+        public function __construct(
+            protected ?string $response = null;
+    -       protected Collection $creditMemos, 
+            ...
+            protected Collection $images
+        ) {
+            ...
+    -       $this->creditMemos = new ArrayCollection();
+            ...
+        }
+    ```
+    * If you want to achieve behavior from before the decoupling you need to modify your `Sylius\Plus\Returns\Domain\Model\ReturnRequest` entity
+      by adding required trait:
+   
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Entity;
+
+use Doctrine\Common\Collections\Collection;
+use Sylius\Plus\Entity\CreditMemosAwareInterface;
+use Sylius\Plus\Entity\CreditMemosAwareTrait;
+use Sylius\Plus\Returns\Domain\Model\OrderInterface;
+use Sylius\Plus\Returns\Domain\Model\ReturnRequest as BaseReturnRequest;
+use Doctrine\ORM\Mapping as ORM;
+use Sylius\Plus\Returns\Domain\Model\ReturnRequestResolution;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="sylius_plus_return_request")
+ * @final
+ */
+class ReturnRequest extends BaseReturnRequest implements CreditMemosAwareInterface
+{
+    use CreditMemosAwareTrait {
+        __construct as private initializeCreditMemoAwareTrait;
+    }
+
+    public function __construct(
+        string $id,
+        string $number,
+        OrderInterface $order,
+        ReturnRequestResolution $resolution,
+        string $reason,
+        \DateTimeInterface $submittedAt,
+        Collection $returnedUnits,
+        string $currencyCode,
+        Collection $images
+    )
+    {
+        parent::__construct($id, $number, $order, $resolution, $reason, $submittedAt, $returnedUnits, $currencyCode, $images);
+
+        $this->initializeCreditMemoAwareTrait();
+    }
+}   
+```
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
