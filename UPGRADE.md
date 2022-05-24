@@ -70,6 +70,32 @@ sylius_plus:
                 model: App\Entity\ReturnRequest
 ```
 
+1. The `Sylius\Plus\Returns\Application\Creator\ReplacementOrderCreatorInterface` interface has been changed:
+
+    ```diff
+    +   public function createFromReturnRequest(ReturnRequestInterface $returnRequest, array $variantsCodeWithQuantity): OrderInterface;
+    -   public function createFromReturnRequest(ReturnRequestInterface $returnRequest, VariantsQuantityMapInterface $variantsQuantityMap): OrderInterface;
+    ```
+
+1. The constructor of `Sylius\Plus\Returns\Application\Creator\ReplacementOrderCreator` class has been changed:
+
+    ```php
+        public function __construct(
+    -       private VariantsQuantityMapFactoryInterface $variantsQuantityMapFactory,
+            private FactoryInterface $orderFactory,
+            private FactoryInterface $orderItemFactory,
+            private FactoryInterface $shipmentFactory,
+    -       private VariantQuantityMapAvailabilityCheckerInterface $availabilityChecker,
+    +       private OrderItemsAvailabilityCheckerInterface $orderItemsAvailabilityChecker,
+            private OrderItemQuantityModifierInterface $orderItemQuantityModifier,
+    +       private ProductVariantRepository $productVariantRepository,
+            private StateMachineFactoryInterface $stateMachineFactory
+        ) {
+        }
+    ```
+
+1. The fourth constructor parameter of `Sylius\Plus\Returns\Application\CommandHandler\CreateReplacementOrderHandler` has been removed.
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
