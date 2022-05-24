@@ -3,6 +3,8 @@
 1. Doctrine string functions were removed from entity manager, due to collisions with Postgres.
 
 1. Classes have been moved to new namespaces:
+    * `Sylius\Plus\BusinessUnits\Application\Listener\InvoiceShopBillingDataFactory` to `Sylius\Plus\Factory\InvoiceShopBillingDataFactory`
+    * `Sylius\Plus\BusinessUnits\Application\Listener\InvoiceShopBillingDataFactoryInterface` to `Sylius\Plus\Factory\InvoiceShopBillingDataFactoryInterface`
     * `Sylius\Plus\Reviews\Infrastructure\Validator\UniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\UniqueReviewerEmailValidator`
     * `Sylius\Plus\Reviews\Infrastructure\Validator\ApiUniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\ApiUniqueReviewerEmailValidator`
     * `Sylius\Plus\Returns\Infrastructure\Listener\CreditMemoWithReturnRequestEventListener` to `Sylius\Plus\Listener\CreditMemoWithReturnRequestEventListener`
