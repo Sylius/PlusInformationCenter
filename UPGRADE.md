@@ -1,5 +1,8 @@
 # UPGRADE FROM 1.0.0-ALPHA.7 to 1.0.0-ALPHA.8
 
+1. Support for Sylius v1.10 has been dropped, you need to upgrade Sylius to v1.11.0. 
+   Please follow [Sylius's upgrade instructions](https://github.com/Sylius/Sylius/blob/master/UPGRADE-1.11.md).
+
 1. Doctrine string functions were removed from entity manager, due to collisions with Postgres.
 
 1. Classes have been moved to new namespaces:
