@@ -16,62 +16,7 @@
 
 1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` class has been changed:
     * `public function creditMemos(): Collection` and `public function addCreditMemo(CreditMemoInterface $creditMemo): void` methods have been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
-    * To achieve the previous behaviour, you need to add mentioned trait and a proper interface to `ReturnRequest` entity:
-
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace App\Entity;
-
-use Doctrine\Common\Collections\Collection;
-use Sylius\Plus\Entity\CreditMemosAwareInterface;
-use Sylius\Plus\Entity\CreditMemosAwareTrait;
-use Sylius\Plus\Returns\Domain\Model\OrderInterface;
-use Sylius\Plus\Returns\Domain\Model\ReturnRequest as BaseReturnRequest;
-use Doctrine\ORM\Mapping as ORM;
-use Sylius\Plus\Returns\Domain\Model\ReturnRequestResolution;
-
-/**
- * @ORM\Entity()
- * @ORM\Table(name="sylius_plus_return_request")
- * @final
- */
-class ReturnRequest extends BaseReturnRequest implements CreditMemosAwareInterface
-{
-    use CreditMemosAwareTrait {
-        __construct as private initializeCreditMemoAwareTrait;
-    }
-    
-    public function __construct(
-        string $id,
-        string $number,
-        OrderInterface $order,
-        ReturnRequestResolution $resolution,
-        string $reason,
-        \DateTimeInterface $submittedAt,
-        Collection $returnedUnits,
-        string $currencyCode,
-        Collection $images
-    )
-    {
-        parent::__construct($id, $number, $order, $resolution, $reason, $submittedAt, $returnedUnits, $currencyCode, $images);
-        
-        $this->initializeCreditMemoAwareTrait();
-    }
-}   
-```
-
-   * And register it:
-
-```yaml
-sylius_plus:
-    resources:
-        return_request:
-            classes:
-                model: App\Entity\ReturnRequest
-```
+    * The `Sylius\Plus\Entity\ReturnRequest` is extending `Sylius\Plus\Returns\Domain\Model\ReturnRequest` and using `CreditMemosAwareTrait` to achieve previous behaviour and is now in use. If you want to change it - you have to replace this new entity.
 
 1. The `Sylius\Plus\Returns\Application\Creator\ReplacementOrderCreatorInterface` interface has been changed:
 
