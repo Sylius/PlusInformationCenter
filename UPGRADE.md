@@ -5,14 +5,20 @@
 
 1. Doctrine string functions were removed from entity manager, due to collisions with Postgres.
 
-1. Classes have been moved to new namespaces:
+1. Classes and interfaces have been moved to new namespaces:
     * `Sylius\Plus\BusinessUnits\Application\Listener\InvoiceShopBillingDataFactory` to `Sylius\Plus\Factory\InvoiceShopBillingDataFactory`
     * `Sylius\Plus\BusinessUnits\Application\Listener\InvoiceShopBillingDataFactoryInterface` to `Sylius\Plus\Factory\InvoiceShopBillingDataFactoryInterface`
-    * `Sylius\Plus\Reviews\Infrastructure\Validator\UniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\UniqueReviewerEmailValidator`
-    * `Sylius\Plus\Reviews\Infrastructure\Validator\ApiUniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\ApiUniqueReviewerEmailValidator`
-    * `Sylius\Plus\Returns\Infrastructure\Listener\CreditMemoWithReturnRequestEventListener` to `Sylius\Plus\Listener\CreditMemoWithReturnRequestEventListener`
-    * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperatorInterface` to `Sylius\Plus\Returns\Application\Operator\ReturnInventoryOperatorInterface`
+    * `Sylius\Plus\ChannelAdmin\Application\Checker\CreditMemoResourceChannelChecker` to `Sylius\Plus\Checker\CreditMemoResourceChannelChecker`
+    * `Sylius\Plus\ChannelAdmin\Application\Checker\CustomerResourceChannelChecker` to `Sylius\Plus\CustomerPools\Application\Checker\CustomerResourceChannelChecker`
+    * `Sylius\Plus\ChannelAdmin\Application\Checker\InvoiceResourceChannelChecker` to `Sylius\Plus\Checker\InvoiceResourceChannelChecker`
+    * `Sylius\Plus\ChannelAdmin\Application\Checker\ResourceChannelCheckerInterface` to `Sylius\Plus\SharedKernel\ResourceChannelCheckerInterface`
+    * `Sylius\Plus\ChannelAdmin\Application\Checker\ReturnRequestResourceChannelChecker` to `Sylius\Plus\Returns\Application\Checker\ReturnRequestResourceChannelChecker`
+    * `Sylius\Plus\ChannelAdmin\Application\Exception\ResourceNotSupportedException` to `Sylius\Plus\SharedKernel\ResourceNotSupportedException`
     * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperator` to `Sylius\Plus\Operator\ReturnInventoryOperator`
+    * `Sylius\Plus\Inventory\Application\Operator\ReturnInventoryOperatorInterface` to `Sylius\Plus\Returns\Application\Operator\ReturnInventoryOperatorInterface`
+    * `Sylius\Plus\Returns\Infrastructure\Listener\CreditMemoWithReturnRequestEventListener` to `Sylius\Plus\Listener\CreditMemoWithReturnRequestEventListener`
+    * `Sylius\Plus\Reviews\Infrastructure\Validator\ApiUniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\ApiUniqueReviewerEmailValidator`
+    * `Sylius\Plus\Reviews\Infrastructure\Validator\UniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\UniqueReviewerEmailValidator`
 
 1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` class has been changed:
     * `public function creditMemos(): Collection` and `public function addCreditMemo(CreditMemoInterface $creditMemo): void` methods have been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
