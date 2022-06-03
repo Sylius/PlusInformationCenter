@@ -50,6 +50,8 @@
 
 1. The fourth constructor parameter of `Sylius\Plus\Returns\Application\CommandHandler\CreateReplacementOrderHandler` has been removed.
 
+1. The `Sylius\Plus\Loyalty\Infrastructure\Form\Type\ProductPerChannelChoiceType` has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Form\Type\ProductPerChannelAutocompleteChoiceType`.
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
