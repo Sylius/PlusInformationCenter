@@ -52,6 +52,9 @@
 
 1. The `Sylius\Plus\Loyalty\Infrastructure\Form\Type\ProductPerChannelChoiceType` has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Form\Type\ProductPerChannelAutocompleteChoiceType`.
 
+1. The `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQueryInterface` and its implementation `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQuery` have been removed.
+   Therefore, the constructor of `Sylius\Plus\Inventory\Infrastructure\Fixture\InventorySourceStockFixture` takes `Sylius\Component\Core\Repository\ProductRepositoryInterface` in place of `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQueryInterface`.
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
