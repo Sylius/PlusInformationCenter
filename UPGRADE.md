@@ -55,6 +55,8 @@
 1. The `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQueryInterface` and its implementation `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQuery` have been removed.
    Therefore, the constructor of `Sylius\Plus\Inventory\Infrastructure\Fixture\InventorySourceStockFixture` takes `Sylius\Component\Core\Repository\ProductRepositoryInterface` in place of `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQueryInterface`.
 
+1. Entire GMV report feature has been removed. all used services from this feature should be replaced by a custom implementation.
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
