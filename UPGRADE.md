@@ -57,6 +57,16 @@
 
 1. The entire GMV report feature has been removed. All used services from this feature should be replaced by a custom implementation.
 
+1. `Sylius\Plus\Returns\Infrastructure\Checker\CsrfCheckerInterface` has been added as a last argument to constructor for controllers:
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\AcceptReturnRequestAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ChangeReturnRequestResolutionAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\CreateReplacementOrderAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\MarkReturnRequestUnitsAsReceivedAction`
+    * `Sylius\RefundPlugin\Action\Admin\RefundUnitsAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\RejectReturnRequestAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\MarkReturnRequestAsRepairedItemsSentAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ResolveReturnRequestAction`
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
