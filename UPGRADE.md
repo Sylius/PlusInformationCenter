@@ -67,6 +67,18 @@
     * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\MarkReturnRequestAsRepairedItemsSentAction`
     * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ResolveReturnRequestAction`
 
+1. The constructor of `Sylius\Plus\Loyalty\Application\Processor\LoyaltyPointsProcessorInterface` class has been changed:
+
+    ```php
+        public function __construct(
+            private AdjustmentFactoryInterface $adjustmentFactory,
+    -       private RepositoryInterface $loyaltyRuleRepository,
+    +       private LoyaltyRuleQueryInterface $loyaltyRuleQuery,
+            private ActionBasedLoyaltyPointsCalculatorInterface $calculator
+        ) {
+        }
+    ```
+
 # UPGRADE FROM 1.0.0-ALPHA.6 to 1.0.0-ALPHA.7
 
 ## General update
