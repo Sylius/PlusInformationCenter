@@ -21,8 +21,10 @@
     * `Sylius\Plus\Reviews\Infrastructure\Validator\UniqueReviewerEmailValidator` to `Sylius\Plus\CustomerPools\Infrastructure\Validator\UniqueReviewerEmailValidator`
 
 1. The `Sylius\Plus\Returns\Domain\Model\ReturnRequest` class has been changed:
-    * `public function creditMemos(): Collection` and `public function addCreditMemo(CreditMemoInterface $creditMemo): void` methods have been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
-    * The `Sylius\Plus\Entity\ReturnRequest` is extending `Sylius\Plus\Returns\Domain\Model\ReturnRequest` and using `CreditMemosAwareTrait` to achieve previous behaviour and is now in use. If you want to change it - you have to replace this new entity.
+    * `public function creditMemos(): Collection` and `public function addCreditMemo(CreditMemoInterface $creditMemo): void` methods 
+      have been moved to `Sylius\Plus\Entity\CreditMemoAwareTrait`
+    * The `Sylius\Plus\Entity\ReturnRequest` is extending `Sylius\Plus\Returns\Domain\Model\ReturnRequest` and using `CreditMemosAwareTrait` 
+      to achieve the previous behaviour and is now in use. If you want to change it - you have to replace this new entity.
 
 1. The `Sylius\Plus\Returns\Application\Creator\ReplacementOrderCreatorInterface` interface has been changed:
 
@@ -53,7 +55,8 @@
 1. The `Sylius\Plus\Loyalty\Infrastructure\Form\Type\ProductPerChannelChoiceType` has been replaced with `Sylius\Plus\Loyalty\Infrastructure\Form\Type\ProductPerChannelAutocompleteChoiceType`.
 
 1. The `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQueryInterface` and its implementation `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQuery` have been removed.
-   Therefore, the constructor of `Sylius\Plus\Inventory\Infrastructure\Fixture\InventorySourceStockFixture` takes `Sylius\Component\Core\Repository\ProductRepositoryInterface` in place of `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQueryInterface`.
+   Therefore, the constructor of `Sylius\Plus\Inventory\Infrastructure\Fixture\InventorySourceStockFixture` takes
+   `Sylius\Component\Core\Repository\ProductRepositoryInterface` in place of `Sylius\Plus\Doctrine\ORM\FindEnabledProductsByChannelQueryInterface`.
 
 1. The entire GMV report feature has been removed. All used services from this feature should be replaced by a custom implementation.
 
