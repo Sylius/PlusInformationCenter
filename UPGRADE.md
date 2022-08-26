@@ -1,3 +1,22 @@
+# UPGRADE FROM 1.0.0-ALPHA.8 to 1.0.0-ALPHA.9
+
+1. The constructor of `Sylius\Plus\PartialShipping\Application\CommandHandler\SplitAndSendShipmentHandler` class has been changed:
+
+    ```diff
+        public function __construct(
+            private ShipmentFactoryInterface $shipmentFactory,
+    +       private AdjustmentDuplicatorInterface $adjustmentDuplicator,
+            private ShipmentRepositoryInterface $shipmentRepository,
+            private OrderItemUnitRepositoryInterface $orderItemUnitRepository,
+            private RepositoryInterface $inventorySourceRepository,
+            private ObjectManager $shipmentManager,
+            private VariantsQuantityMapFactoryInterface $variantsQuantityMapFactory,
+            private ChangeInventorySourceOperatorInterface $changeInventorySourceOperator,
+            private FactoryInterface $stateMachineFactory,
+        ) {
+        }
+    ```
+
 # UPGRADE FROM 1.0.0-ALPHA.7 to 1.0.0-ALPHA.8
 
 1. Support for Sylius v1.10 has been dropped, you need to upgrade Sylius to v1.11.0. 
