@@ -17,6 +17,53 @@
         }
     ```
 
+1. The constructor of `Sylius\Plus\OAuth\UserProvider` class has been changed:
+
+    ```diff
+        public function __construct(
+            string $supportedUserClass,
+    -       FactoryInterface $userFactory,
+            UserRepositoryInterface $userRepository,
+    -       FactoryInterface $oauthFactory,
+    -       RepositoryInterface $oauthRepository,
+    -       ObjectManager $userManager,
+            CanonicalizerInterface $canonicalizer,
+    -       CustomerProviderInterface $customerProvider,
+    +       private FactoryInterface $userFactory,
+    +       private FactoryInterface $oauthFactory,
+    +       private RepositoryInterface $oauthRepository,
+    +       private ObjectManager $userManager,
+    +       private CustomerResolverInterface $customerResolver,
+        ) {
+            parent::__construct($supportedUserClass, $userRepository, $canonicalizer);
+
+    -       $this->oauthFactory = $oauthFactory;
+    -       $this->oauthRepository = $oauthRepository;
+    -       $this->userFactory = $userFactory;
+    -       $this->userManager = $userManager;
+    -       $this->customerProvider = $customerProvider;
+        }
+    ```
+   
+1. The `Symfony\Component\HttpFoundation\Session\Session` argument has been replaced with `Symfony\Component\HttpFoundation\RequestStack` in the constructor of following actions:
+    * `Sylius\Plus\Inventory\Infrastructure\Ui\ApplyInventorySourceStockForProductVariantAction`
+    * `Sylius\Plus\Inventory\Infrastructure\Ui\SplitShipmentAction`
+    * `Sylius\Plus\Loyalty\Infrastructure\Ui\Shop\BuyLoyaltyPurchaseAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\AcceptReturnRequestAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ChangeReturnRequestResolutionAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\CreateReplacementOrderAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\MarkReturnRequestAsRepairedItemsSentAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\MarkReturnRequestUnitsAsReceivedAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\RefundUnitsAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\RejectReturnRequestAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ResolveReturnRequestAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ReturnUnitsToInventoryAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\SelectReturnRequestUnitsAsReceivedAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\SelectUnitsToReturnToInventoryAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Admin\SplitReturnRequestAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Shop\CancelReturnRequestAction`
+    * `Sylius\Plus\Returns\Infrastructure\Ui\Shop\RequestReturnAction`
+
 # UPGRADE FROM 1.0.0-ALPHA.7 to 1.0.0-ALPHA.8
 
 1. Support for Sylius v1.10 has been dropped, you need to upgrade Sylius to v1.11.0. 
