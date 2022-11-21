@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v1.0.0-ALPHA.9 (2022-11-21)
+
+- [#1175](https://github.com/Sylius/Plus/issues/1175) [Maintenance] Fix potential undefined array key with assertion ([@coldic3](https://github.com/coldic3))
+- [#1174](https://github.com/Sylius/Plus/issues/1174) [Adjustment] Prevent removing shipment adjustments on splitting ([@coldic3](https://github.com/coldic3))
+- [#1178](https://github.com/Sylius/Plus/issues/1178) [Fixtures] Add making refunds in ReturnRequestFixture ([@coldic3](https://github.com/coldic3))
+- [#1193](https://github.com/Sylius/Plus/issues/1193) [Loyalty][API] Validate LoyaltyPurchase availability ([@NoResponseMate](https://github.com/NoResponseMate))
+- [#1183](https://github.com/Sylius/Plus/issues/1183) Validate items from another order while returning ([@AdamKasp](https://github.com/AdamKasp))
+- [#1197](https://github.com/Sylius/Plus/issues/1197) [Fixtures] Fix OrderExampleFactory to use proper attribute to get customer ([@GSadee](https://github.com/GSadee))
+- [#1196](https://github.com/Sylius/Plus/issues/1196) [API][Loyalty] Change media type to supported one ([@TheMilek](https://github.com/TheMilek))
+- [#1214](https://github.com/Sylius/Plus/issues/1214) [Maintenance] Fix Psalm, APIP 2.7 support and RBAC permission checker ([@coldic3](https://github.com/coldic3))
+- [#1223](https://github.com/Sylius/Plus/issues/1223) [Loyalty][API] Restrict LoyaltyRuleDenormalizer to support APIP>=2.7 only ([@coldic3](https://github.com/coldic3))
+- [#1219](https://github.com/Sylius/Plus/issues/1219) [Maintenance] Drop support for Symfony 4.4 ([@coldic3](https://github.com/coldic3))
+- [#1210](https://github.com/Sylius/Plus/issues/1210) [Product] Display pricing block for a configurable product ([@Rafikooo](https://github.com/Rafikooo))
+- [#1226](https://github.com/Sylius/Plus/issues/1226) [LoyaltyPurchase] Duplicated label removed ([@Rafikooo](https://github.com/Rafikooo))
+- [#1232](https://github.com/Sylius/Plus/issues/1232) Fix coding standard ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1201](https://github.com/Sylius/Plus/issues/1201) [Maintenance] Add support for Sylius 1.12 ([@coldic3](https://github.com/coldic3))
+- [#1231](https://github.com/Sylius/Plus/issues/1231) Validate max amount of points in Loyalty Purchase ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1220](https://github.com/Sylius/Plus/issues/1220) [Maintenance] Symfony 6 support ([@coldic3](https://github.com/coldic3))
+- [#1228](https://github.com/Sylius/Plus/issues/1228) [Templates] Adjust to the new Sylius shop UI styles ([@coldic3](https://github.com/coldic3))
+- [#1237](https://github.com/Sylius/Plus/issues/1237) [Behat] Remove redundant RefundContext with the latest Refund Plugin ([@GSadee](https://github.com/GSadee), [@coldic3](https://github.com/coldic3))
+- [#1234](https://github.com/Sylius/Plus/issues/1234) [Inventory] Fix releasing to inventory when canceling partially shipped order ([@coldic3](https://github.com/coldic3))
+- [#1235](https://github.com/Sylius/Plus/issues/1235) Add credit memos to gitignore in test application ([@GSadee](https://github.com/GSadee))
+- [#1230](https://github.com/Sylius/Plus/issues/1230) [InventorySource] Add `priority` field and update resolving ([@NoResponseMate](https://github.com/NoResponseMate))
+- [#1239](https://github.com/Sylius/Plus/issues/1239) [Maintenance] Fix public/index.php in test app with SF Runtime ([@coldic3](https://github.com/coldic3))
+- [#1240](https://github.com/Sylius/Plus/issues/1240) [Maintenance] Remove wkhtmltopdf binary ([@coldic3](https://github.com/coldic3))
+
 ## v1.0.0-ALPHA.8 (2022-07-28)
 
 - [#1047](https://github.com/Sylius/Plus/issues/1047) [Doctrine] remove string functions from config ([@SirDomin](https://github.com/SirDomin))
