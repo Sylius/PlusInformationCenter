@@ -1,3 +1,15 @@
+# UPGRADE FROM 1.0.0-ALPHA.9 to 1.0.0-ALPHA.10
+
+1. The constructor of `Sylius\Plus\Rbac\Infrastructure\Templating\Helper\AclHelper` class has been changed:
+
+    ```diff
+        public function __construct(
+            protected AdminPermissionResolverInterface $adminPermissionResolver,
+    +       protected AdminUserContextInterface $adminUserContext,
+        ) {
+        }
+    ```
+
 # UPGRADE FROM 1.0.0-ALPHA.8 to 1.0.0-ALPHA.9
 
 1. The constructor of `Sylius\Plus\PartialShipping\Application\CommandHandler\SplitAndSendShipmentHandler` class has been changed:
