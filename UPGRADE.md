@@ -1,4 +1,4 @@
-# UPGRADE FROM 1.0.0-ALPHA.9 to 1.0.0-ALPHA.10
+# UPGRADE FROM 1.0.0-ALPHA.9 to 1.0.0-BETA.1
 
 1. The constructor of `Sylius\Plus\Rbac\Infrastructure\Templating\Helper\AclHelper` class has been changed:
 
