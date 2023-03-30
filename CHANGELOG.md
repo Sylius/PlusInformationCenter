@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v1.0.0-BETA.2 (2023-03-30)
+
+- [#1273](https://github.com/Sylius/Plus/issues/1273) Load ApiBundle-coupled services only when ApiBundle is active ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1274](https://github.com/Sylius/Plus/issues/1274) Allow to configure form on every sylius_plus.resource entry ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1275](https://github.com/Sylius/Plus/issues/1275) [RBAC] Add RequestMatcherPass to set admin request matcher definition ([@coldic3](https://github.com/coldic3))
+- [#1277](https://github.com/Sylius/Plus/issues/1277) [Fixtures] Add InvoicesPurgerListener to plus suite ([@GSadee](https://github.com/GSadee))
+- [#1276](https://github.com/Sylius/Plus/issues/1276) Extract constants for emails ([@GSadee](https://github.com/GSadee))
+- [#1279](https://github.com/Sylius/Plus/issues/1279) Remove official support for ApiPlatform 2.6.x ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1278](https://github.com/Sylius/Plus/issues/1278) Move all API-related services to the integration config ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1281](https://github.com/Sylius/Plus/issues/1281) Disable API-coupled Compiler Pass when SyliusApiBundle is disabled ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1280](https://github.com/Sylius/Plus/issues/1280) Allow to configure InventorySourceAddress form ([@jakubtobiasz](https://github.com/jakubtobiasz))
+- [#1285](https://github.com/Sylius/Plus/issues/1285) [Returns] Move the coupling with CreditMemos back to the base ReturnRequest entity ([@GSadee](https://github.com/GSadee))
+- [#1283](https://github.com/Sylius/Plus/issues/1283) [Minor] Inventory validation fixes ([@lchrusciel](https://github.com/lchrusciel), [@coldic3](https://github.com/coldic3), [@GSadee](https://github.com/GSadee))
+
 ## v1.0.0-BETA.1 (2023-02-23)
 
 - [#1247](https://github.com/Sylius/Plus/issues/1247) [Composer] minimum-stability - dev to stable changed ([@Rafikooo](https://github.com/Rafikooo))
