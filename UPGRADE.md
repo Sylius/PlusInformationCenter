@@ -1,3 +1,9 @@
+# UPGRADE FROM 1.0.0-BETA.1 to 1.0.0-BETA.2
+
+1. The `Sylius\Plus\Entity\ReturnRequest` and `Sylius\Plus\Entity\CreditMemoAwareTrait` have been removed and the methods
+   `public function creditMemos(): Collection` and `public function addCreditMemo(CreditMemoInterface $creditMemo): void` 
+   have been moved back to the `Sylius\Plus\Returns\Domain\Model\ReturnRequest`.
+
 # UPGRADE FROM 1.0.0-ALPHA.9 to 1.0.0-BETA.1
 
 1. The constructor of `Sylius\Plus\Rbac\Infrastructure\Templating\Helper\AclHelper` class has been changed:
