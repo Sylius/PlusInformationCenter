@@ -4,6 +4,13 @@
    `public function creditMemos(): Collection` and `public function addCreditMemo(CreditMemoInterface $creditMemo): void` 
    have been moved back to the `Sylius\Plus\Returns\Domain\Model\ReturnRequest`.
 
+2. The `sylius.validator.stock_on_hand` service has been renamed into `sylius.validator.stock_on_hand_cannot_be_lower_than_on_hold`
+   and it points to the `Sylius\Plus\Inventory\Infrastructure\Validator\StockOnHandCannotBeLowerThanOnHoldValidator` class.
+
+3. The `Sylius\Plus\Inventory\Infrastructure\Validator\StockOnHandOnHold` validation constraint has been renamed
+   into `Sylius\Plus\Inventory\Infrastructure\Validator\StockOnHandCannotBeLowerThanOnHold`
+   and it's now validated by `sylius_stock_on_hand_cannot_bo_lower_than_on_hold_validator`.
+
 # UPGRADE FROM 1.0.0-ALPHA.9 to 1.0.0-BETA.1
 
 1. The constructor of `Sylius\Plus\Rbac\Infrastructure\Templating\Helper\AclHelper` class has been changed:
