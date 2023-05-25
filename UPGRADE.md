@@ -1,3 +1,46 @@
+# UPGRADE FROM 1.0.0-BETA.2 to 1.0.0-BETA.3
+1. The constructor of `Sylius\Plus\Inventory\Infrastructure\Ui\SplitShipmentAction` has been changed:
+    
+    ```diff
+        public function __construct(
+        +   private SplitAndSendShipmentCommandDispatcherInterface $commandDispatcher,
+        -   private MessageBusInterface $commandBus,
+            private ShipmentRepositoryInterface $shipmentRepository,
+            private RequestStack $requestStack,
+            private UrlGeneratorInterface $router,
+            private FormFactoryInterface $formFactory,
+            private Environment $twig,
+        ) {
+        }
+    ```
+
+2. The constructor of `Sylius\Plus\PartialShipping\Application\CommandHandler\SplitAndSendShipmentHandler` has been changed:
+    
+    ```diff
+        public function __construct(
+        -   private ShipmentFactoryInterface $shipmentFactory,
+        -   private AdjustmentDuplicatorInterface $adjustmentDuplicator,
+            private ShipmentRepositoryInterface $shipmentRepository,
+        -   private OrderItemUnitRepositoryInterface $orderItemUnitRepository,
+        -   private RepositoryInterface $inventorySourceRepository,
+            private ObjectManager $shipmentManager,
+        -   private VariantsQuantityMapFactoryInterface $variantsQuantityMapFactory,
+        -   private ChangeInventorySourceOperatorInterface $changeInventorySourceOperator,
+            private FactoryInterface $stateMachineFactory,
+        +   private ShipmentSplitterInterface $shipmentSplitter,
+        ) {
+        }
+    ```
+
+3. The `src/Resources/views/Shipment/shipmentSplit.html.twig` template has been adjusted to use Sylius Template events.
+   Content of this template has been divided and moved to both `src/Resources/views/Shipment/Header` and `src/Resources/views/Shipment/Form` catalogs.
+
+   ##### Moreover some of the existing templates have been moved:
+
+   * `src/Resources/views/Shipment/_breadcrumb.html.twig` has been moved to `src/Resources/views/Shipment/Header/_breadcrumb.html.twig`
+   * `src/Resources/views/Shipment/_headerTitle.html.twig` has been moved to `src/Resources/views/Shipment/Header/_headerTitle.html.twig`
+   * `src/Resources/views/Shipment/_header.html.twig` has been moved to `src/Resources/views/Shipment/Header/_header.html.twig`
+
 # UPGRADE FROM 1.0.0-BETA.1 to 1.0.0-BETA.2
 
 1. The `Sylius\Plus\Entity\ReturnRequest` and `Sylius\Plus\Entity\CreditMemoAwareTrait` have been removed and the methods
