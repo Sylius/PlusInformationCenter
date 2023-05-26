@@ -54,6 +54,9 @@
    into `Sylius\Plus\Inventory\Infrastructure\Validator\StockOnHandCannotBeLowerThanOnHold`
    and it's now validated by `sylius_stock_on_hand_cannot_bo_lower_than_on_hold_validator`.
 
+4. The `Sylius\Plus\BusinessUnits\Domain\Model\BusinessUnitAddress` has been transformed into a resource for better extendability,
+   it now resides in its own table `sylius_business_unit_address` instead of being embedded within the `sylius_business_unit`.
+
 # UPGRADE FROM 1.0.0-ALPHA.9 to 1.0.0-BETA.1
 
 1. The constructor of `Sylius\Plus\Rbac\Infrastructure\Templating\Helper\AclHelper` class has been changed:
