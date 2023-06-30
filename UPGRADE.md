@@ -1,4 +1,5 @@
 # UPGRADE FROM 1.0.0-BETA.2 to 1.0.0-BETA.3
+
 1. The constructor of `Sylius\Plus\Inventory\Infrastructure\Ui\SplitShipmentAction` has been changed:
     
     ```diff
@@ -40,6 +41,14 @@
    * `src/Resources/views/Shipment/_breadcrumb.html.twig` has been moved to `src/Resources/views/Shipment/Header/_breadcrumb.html.twig`
    * `src/Resources/views/Shipment/_headerTitle.html.twig` has been moved to `src/Resources/views/Shipment/Header/_headerTitle.html.twig`
    * `src/Resources/views/Shipment/_header.html.twig` has been moved to `src/Resources/views/Shipment/Header/_header.html.twig`
+
+4. The following templates have been removed in favour of using Sylius template events:
+    - src/Resources/templates/bundles/SyliusRefundPlugin/_header.html.twig
+    - src/Resources/templates/bundles/SyliusRefundPlugin/_unitInput.html.twig
+    - src/Resources/templates/bundles/SyliusRefundPlugin/orderRefunds.html.twig
+
+   You need to remove it from your side and if you already override some of these templates
+   you can refactor it to use events or keep overriding it this way.
 
 # UPGRADE FROM 1.0.0-BETA.1 to 1.0.0-BETA.2
 
