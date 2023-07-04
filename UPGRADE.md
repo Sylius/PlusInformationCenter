@@ -33,7 +33,20 @@
         }
     ```
 
-3. The `src/Resources/views/Shipment/shipmentSplit.html.twig` template has been adjusted to use Sylius Template events.
+3. The constructor of `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ChangeReturnRequestResolutionAction` has been changed:
+
+    ```diff
+        public function __construct(
+        +   private FormFactoryInterface $formFactory,
+            private MessageBusInterface $commandBus,
+            private UrlGeneratorInterface $router,
+            private RequestStack $requestStack,
+        -   private CsrfCheckerInterface $csrfChecker,
+        ) {
+        }
+    ```
+
+4. The `src/Resources/views/Shipment/shipmentSplit.html.twig` template has been adjusted to use Sylius Template events.
    Content of this template has been divided and moved to both `src/Resources/views/Shipment/Header` and `src/Resources/views/Shipment/Form` catalogs.
 
    ##### Moreover some of the existing templates have been moved:
