@@ -35,7 +35,24 @@
         }
     ```
 
-3. The `src/Resources/views/Shipment/shipmentSplit.html.twig` template has been adjusted to use Sylius Template events.
+3. The constructor of `\Sylius\Plus\Returns\Infrastructure\Ui\Admin\CreateReplacementOrderAction` has been changed:
+
+    ```diff
+        public function __construct(
+            private MessageBusInterface $commandBus,
+        -   private RepositoryInterface $orderRepository,
+            private RequestStack $requestStack,
+            private UrlGeneratorInterface $router,
+            private FormFactoryInterface $formFactory,
+            private Environment $twig,
+            private RepositoryInterface $returnRequestRepository,
+        -   private VariantsQuantityMapFactoryInterface $variantsQuantityMapFactory,
+        +   private ReplacementOrderFactoryInterface $replacementOrderFactory,
+        ) {
+        }
+    ```
+
+4. The `src/Resources/views/Shipment/shipmentSplit.html.twig` template has been adjusted to use Sylius Template events.
    Content of this template has been divided and moved to both `src/Resources/views/Shipment/Header` and `src/Resources/views/Shipment/Form` catalogs.
 
    ##### Moreover some of the existing templates have been moved:
@@ -44,7 +61,7 @@
     * `src/Resources/views/Shipment/_headerTitle.html.twig` has been moved to `src/Resources/views/Shipment/Header/_headerTitle.html.twig`
     * `src/Resources/views/Shipment/_header.html.twig` has been moved to `src/Resources/views/Shipment/Header/_header.html.twig`
 
-4. The constructor of `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ChangeReturnRequestResolutionAction` has been changed:
+5. The constructor of `Sylius\Plus\Returns\Infrastructure\Ui\Admin\ChangeReturnRequestResolutionAction` has been changed:
 
     ```diff
         public function __construct(
@@ -57,10 +74,10 @@
         }
     ```
 
-5. The `Sylius\Plus\Inventory\Application\Applier\InventorySourceStockApplier` and
+6. The `Sylius\Plus\Inventory\Application\Applier\InventorySourceStockApplier` and
    `Sylius\Plus\Inventory\Application\Applier\InventorySourceStockApplierInterface` have been removed.
 
-6. The `Sylius\Plus\Inventory\Infrastructure\Ui\ApplyInventorySourceStockForProductVariantAction` has been refactored into
+7. The `Sylius\Plus\Inventory\Infrastructure\Ui\ApplyInventorySourceStockForProductVariantAction` has been refactored into
    `Sylius\Plus\Inventory\Infrastructure\Ui\ChangeInventorySourceStockOnHandAction` and its constructor now looks like this:
 
     ```diff
@@ -75,7 +92,7 @@
          }
     ```
 
-7. The route for updating particular inventory stock on hand level has been updated:
+8. The route for updating particular inventory stock on hand level has been updated:
 
     ```diff
     -   sylius_admin_inventory_source_stock_applier:
@@ -90,7 +107,7 @@
     +          _controller: Sylius\Plus\Inventory\Infrastructure\Ui\ChangeInventorySourceStockOnHandAction
     ```
 
-8. The following templates have been removed in favour of using Sylius template events:
+9. The following templates have been removed in favour of using Sylius template events:
     - src/Resources/templates/bundles/SyliusRefundPlugin/_header.html.twig
     - src/Resources/templates/bundles/SyliusRefundPlugin/_unitInput.html.twig
     - src/Resources/templates/bundles/SyliusRefundPlugin/orderRefunds.html.twig
