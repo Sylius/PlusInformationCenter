@@ -67,8 +67,11 @@
         public function __construct(
         +   private FormFactoryInterface $formFactory,
             private MessageBusInterface $commandBus,
+        +   private ChangeReturnRequestResolutionCommandCreatorInterface $commandCreator,
             private UrlGeneratorInterface $router,
             private RequestStack $requestStack,
+        +   private ValidatorInterface $validator,
+        +   private array $validationGroups,
         -   private CsrfCheckerInterface $csrfChecker,
         ) {
         }
