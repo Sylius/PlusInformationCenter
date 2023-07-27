@@ -4,15 +4,15 @@
     
     ```diff
         public function __construct(
-        +   private SplitAndSendShipmentCommandDispatcherInterface $commandDispatcher,
         +   private SplitAndSendShipmentCommandCreatorInterface $commandCreator,
-        -   private MessageBusInterface $commandBus,
+            private MessageBusInterface $commandBus,
             private ShipmentRepositoryInterface $shipmentRepository,
             private RequestStack $requestStack,
             private UrlGeneratorInterface $router,
             private FormFactoryInterface $formFactory,
             private Environment $twig,
         +   private ValidatorInterface $validator,
+        +   private array $validationGroups,
         ) {
         }
     ```
