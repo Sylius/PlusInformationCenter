@@ -118,6 +118,14 @@
    You need to remove it from your side and if you already override some of these templates
    you can refactor it to use events or keep overriding it this way.
 
+10. Form data transformers:
+    - `Sylius\Plus\Loyalty\Infrastructure\Form\DataTransformer\ChangeActionToChannelsBasedItemsTotalToPointsRatioConfigurationTransformer`
+    - `Sylius\Plus\Loyalty\Infrastructure\Form\DataTransformer\ChangeActionToChannelsBasedPointsPerProductRatioConfigurationTransformer`
+    have been removed.
+
+    In their place a generic `Sylius\Plus\Loyalty\Infrastructure\Form\DataTransformer\ChangeActionToChannelsBasedRatioConfigurationTransformer`
+    has been added to ease customization.
+
 # UPGRADE FROM 1.0.0-BETA.1 to 1.0.0-BETA.2
 
 1. The `Sylius\Plus\Entity\ReturnRequest` and `Sylius\Plus\Entity\CreditMemoAwareTrait` have been removed and the methods
