@@ -1,3 +1,42 @@
+# UPGRADE FROM 1.0.0-BETA.3 to 1.x.x
+
+1. Support for Sylius 1.13 has been added, it is now the recommended Sylius version to use.
+
+1. Support for Sylius 1.11 has been dropped, upgrade your application to [Sylius 1.12](https://github.com/Sylius/Sylius/blob/1.12/UPGRADE-1.12.md).
+   or to [Sylius 1.13](https://github.com/Sylius/Sylius/blob/1.13/UPGRADE-1.13.md).
+
+1. Support for PHP 8.0 has been dropped.
+
+1. The following constructor signatures have been changed:
+
+   `Sylius\Plus\Inventory\Application\DataPersister\ProductVariantDataPersister`
+    ```diff
+        public function __construct(
+        -   ContextAwareDataPersisterInterface $decoratedDataPersister,
+            FactoryInterface $inventorySourceStockFactory,
+            RepositoryInterface $inventorySourceRepository,
+        )
+    ```
+
+1. The following classes have transitioned from using `SM\Factory\FactoryInterface` to `Sylius\Abstraction\StateMachine\StateMachineInterface`. However, to ensure backward compatibility, their constructors still accept `SM\Factory\FactoryInterface`:
+
+    - `Sylius\Plus\PartialShipping\Application\CommandHandler\SplitAndSendShipmentHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\AcceptReturnRequestHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\CancelReturnRequestHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\MarkReturnRequestAsItemsReturnedToInventoryHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\MarkReturnRequestAsPackageReceivedHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\MarkReturnRequestAsRepairedItemsSentHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\MarkReturnRequestUnitsAsReceivedHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\RejectReturnRequestHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\ResolveReturnRequestHandler`
+    - `Sylius\Plus\Returns\Application\CommandHandler\ReturnUnitsToInventoryHandler`
+    - `Sylius\Plus\Returns\Application\Creator\ReplacementOrderCreator`
+    - `Sylius\Plus\Returns\Application\StateResolver\ReturnRequestItemsReturnedToInventoryStateResolver`
+    - `Sylius\Plus\Returns\Application\StateResolver\ReturnRequestPackageReceivedStateResolver`
+    - `Sylius\Plus\Returns\Infrastructure\Ui\Admin\SelectReturnRequestUnitsAsReceivedAction`
+    - `Sylius\Plus\Returns\Infrastructure\Ui\Admin\SelectUnitsToReturnToInventoryAction`
+    - `Sylius\Plus\Returns\Infrastructure\Ui\Shop\CancelReturnRequestAction`
+
 # UPGRADE FROM 1.0.0-BETA.2 to 1.0.0-BETA.3
 
 1. The constructor of `Sylius\Plus\Inventory\Infrastructure\Ui\SplitShipmentAction` has been changed:
