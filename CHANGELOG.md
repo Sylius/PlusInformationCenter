@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v1.0.0-BETA.4 (2024-04-26)
+
+- [#1299](https://github.com/Sylius/Plus/issues/1299) [CI] Add PHP 8.2 to workflow ([@Rafikooo](https://github.com/Rafikooo))
+- [#1322](https://github.com/Sylius/Plus/issues/1322) Add paths to PHPStan configuration ([@GSadee](https://github.com/GSadee))
+- [#1321](https://github.com/Sylius/Plus/issues/1321) [PartialShipping] Validate if there is no inventory source chosen while partially shipping order with tracked units ([@GSadee](https://github.com/GSadee))
+- [#1325](https://github.com/Sylius/Plus/issues/1325) [Maintenance] Fix build ([@mpysiak](https://github.com/mpysiak))
+- [#1327](https://github.com/Sylius/Plus/issues/1327) [Maintenance] Remove psalm ([@mpysiak](https://github.com/mpysiak))
+- [#1326](https://github.com/Sylius/Plus/issues/1326) [Maintenance] Drop Sylius 1.11 support ([@mpysiak](https://github.com/mpysiak), [@Wojdylak](https://github.com/Wojdylak))
+- [#1329](https://github.com/Sylius/Plus/issues/1329) [Maintenance] Add support for sylius 1.13 ([@Wojdylak](https://github.com/Wojdylak))
+- [#1332](https://github.com/Sylius/Plus/issues/1332) Add missing translations to RBAC ([@TheMilek](https://github.com/TheMilek))
+- [#1333](https://github.com/Sylius/Plus/issues/1333) Fix ResourcePrivilege alias name generation when FQCN provided as controller ([@TheMilek](https://github.com/TheMilek))
+- [#1334](https://github.com/Sylius/Plus/issues/1334) Fix ResourcePrivilege alias name generation when there is also a controller method name provided ([@TheMilek](https://github.com/TheMilek))
+- [#1335](https://github.com/Sylius/Plus/issues/1335) [Maintenance] Add image firewall ([@Wojdylak](https://github.com/Wojdylak))
+- [#1335](https://github.com/Sylius/Plus/issues/1336) Update README.md ([@damonsson](https://github.com/damonsson))
+- [#1335](https://github.com/Sylius/Plus/issues/1337) [Maintenance] Bump Sylius 1.13 to stable v1.13.0 version ([@GSadee](https://github.com/GSadee))
+
 ## v1.0.0-BETA.3 (2023-07-28)
 
 - [#1287](https://github.com/Sylius/Plus/issues/1287) [Conflict] Add conflict with symfony/framework-bundle:6.2.8 ([@Rafikooo](https://github.com/Rafikooo))

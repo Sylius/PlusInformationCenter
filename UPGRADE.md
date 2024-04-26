@@ -1,4 +1,4 @@
-# UPGRADE FROM 1.0.0-BETA.3 to 1.x.x
+# UPGRADE FROM 1.0.0-BETA.3 to 1.0.0-BETA.4
 
 1. Support for Sylius 1.13 has been added, it is now the recommended Sylius version to use.
 
