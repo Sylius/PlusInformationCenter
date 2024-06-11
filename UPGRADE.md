@@ -1,3 +1,7 @@
+# UPGRADE FROM 1.0.0-BETA.4 to 1.0.0-BETA.5
+
+1. Replace `sm_can` twigs function with `sylius_sm_can` in all templates.
+
 # UPGRADE FROM 1.0.0-BETA.3 to 1.0.0-BETA.4
 
 1. Support for Sylius 1.13 has been added, it is now the recommended Sylius version to use.
