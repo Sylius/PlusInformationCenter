@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.0.0-BETA.5 (2024-06-11)
+
+- [#1339](https://github.com/Sylius/Plus/issues/1339) [Maintenance] Replace `sm_can` with `sylius_sm_can` function ([@Wojdylak](https://github.com/Wojdylak))
+- [#1338](https://github.com/Sylius/Plus/issues/1338) [MultiSourceInventory] Disable PaymentPreCompleteListener from Sylius CE ([@GSadee](https://github.com/GSadee))
+
 ## v1.0.0-BETA.4 (2024-04-26)
 
 - [#1299](https://github.com/Sylius/Plus/issues/1299) [CI] Add PHP 8.2 to workflow ([@Rafikooo](https://github.com/Rafikooo))
