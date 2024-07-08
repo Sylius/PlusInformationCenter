@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.0-BETA.6 (2024-07-08)
+
+- [#1340](https://github.com/Sylius/Plus/issues/1340) Add GmvBundle ([@GSadee](https://github.com/GSadee))
+
 ## v1.0.0-BETA.5 (2024-06-11)
 
 - [#1339](https://github.com/Sylius/Plus/issues/1339) [Maintenance] Replace `sm_can` with `sylius_sm_can` function ([@Wojdylak](https://github.com/Wojdylak))
